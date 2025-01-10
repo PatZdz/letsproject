@@ -1,56 +1,90 @@
 "use client";
 
 import React from "react";
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import Image from "next/image";
 
 export default function Services() {
   const services = [
     {
       title: "Website Development",
       description:
-        "We build high-performing, responsive websites and online stores with clean code and intuitive architecture.",
-      icon: "/images/feature_1.png",
+        "We build high-performing, responsive websites and online stores with clean code and intuitive architecture. Whether you need a promotional landing page or a fully featured corporate site, our team ensures fast load times and outstanding user experiences.",
+      tags: ["web design", "web apps", "custom solutions", "ecommerce"],
+      icon: "/images/service_1.png",
     },
     {
       title: "Mobile App Development",
       description:
-        "Reach users on the go with cross-platform apps built in Flutter.",
-      icon: "/images/feature_2.png",
+        "Reach users on the go with cross-platform apps built in Flutter. We transform your vision into a dynamic mobile experience—complete with push notifications, in-app purchases, and seamless integration with your existing systems.",
+      tags: ["cross-platform apps", "app development", "custom solutions"],
+      icon: "/images/service_2.png",
     },
     {
       title: "Branding Design",
       description:
-        "Stand out from the competition with a memorable brand identity.",
-      icon: "/images/feature_3.png",
+        "Stand out from the competition with a memorable brand identity. We craft your logo, define color palettes, select typography, and develop brand guidelines that communicate your core values effectively. Great logo is your first impression.",
+      tags: ["brand strategy", "logo design", "social media", "brand guidelines"],
+      icon: "/images/service_3.png",
     },
     {
       title: "UX/UI Audits & Design",
       description:
-        "Our UX/UI audits pinpoint pain points and optimize user flows.",
-      icon: "/images/feature_4.png",
+        "Our UX/UI audits pinpoint pain points and optimize user flows, reducing friction and boosting engagement. Get a sleek, user-friendly interface that keeps customers coming back. Boost your conversion and earn more money.",
+      tags: ["user experience", "user interface", "boosted conversion"],
+      icon: "/images/service_4.png",
     },
   ];
 
   return (
-    <section id="services" className="py-16 bg-[#f8f9fa]">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">
-          What we can do for you
+    <section id="services" className="py-8 md:py-16 bg-[#F6F4F1]">
+      <div className="container mx-auto px-4 md:px-0">
+        <h2 className="text-2xl md:text-[36px] font-extrabold text-center mb-6 md:mb-8 text-[#1A1A1A]">
+          What we can do for you boss
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-sm p-6 flex flex-col"
+              className="bg-[#F0EEEC] rounded-lg p-6 md:p-[30px] flex flex-col"
             >
-              <img
-                src={service.icon}
-                alt={service.title}
-                className="w-16 h-16 mb-4"
-              />
-              <h3 className="font-semibold text-xl mb-2">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+              <div className="flex gap-4 md:gap-6 mb-4 md:mb-6">
+                <div className="w-[60px] h-[60px] md:w-[76px] md:h-[76px] rounded-full bg-[#E9E3DD] flex items-center justify-center flex-shrink-0">
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    width={42}
+                    height={42}
+                  />
+                </div>
+                <div className="flex flex-col justify-between h-[76px]">
+                  <h3 className="font-semibold text-xl md:text-[30px] text-[#1A1A1A]">
+                    {service.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-[6px]">
+                    {service.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 text-[12px] font-normal bg-[#E9E3DD] text-[#9D958B] rounded-full border border-[#9D958B]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">{service.description}</p>
+              <a href="#" className="btn-secondary self-end">
+                I NEED THIS! <ArrowRightIcon className="h-3 w-3" />
+              </a>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-8 md:mt-12">
+          <p className="text-xl md:text-[24px] font-semibold text-[#1D1E22] mb-4">
+            Do you need a project that includes multiple services?
+          </p>
+          <button className="btn-primary">GET A FREE CONSULTATION</button>
         </div>
       </div>
     </section>

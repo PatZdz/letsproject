@@ -57,6 +57,7 @@ body {
   background-color: #3257A5;
   color: #F6F4F1;
   font-size: 12px;
+  font-weight: 600;
   border-radius: 0.5rem;
   transition: background-color 0.2s ease-in-out;
 }
@@ -70,12 +71,19 @@ body {
   align-items: center;
   gap: 0.5rem;
   font-size: 12px;
+  font-weight: 600;
   text-transform: uppercase;
-  transition: color 0.2s ease-in-out;
+  color: #3257A5;
 }
 
-.btn-secondary:hover {
-  color: #3257A5;
+.btn-secondary svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-secondary:hover svg {
+  transform: translateX(4px);
 }
 
 @media (max-width: 768px) {

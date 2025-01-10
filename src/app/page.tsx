@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
 import WhyChooseUs from "./components/WhyChooseUs";
+import HowWeWork from "./components/HowWeWork";
 
 export default function Page() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -16,6 +17,7 @@ export default function Page() {
       <Hero />
       <Services />
       <WhyChooseUs />
+      <HowWeWork />
       <Pricing />
       <Contact />
     </>
