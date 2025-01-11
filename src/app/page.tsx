@@ -7,6 +7,8 @@ import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
 import WhyChooseUs from "./components/WhyChooseUs";
 import HowWeWork from "./components/HowWeWork";
+import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 
 export default function Page() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -18,8 +20,8 @@ export default function Page() {
       <Services />
       <WhyChooseUs />
       <HowWeWork />
-      <Pricing />
-      <Contact />
+      <FAQ />
+      <Footer />
     </>
   );
 }

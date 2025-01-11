@@ -28,10 +28,18 @@ export default function Hero() {
           eCommerce, and Innovative SaaS products.
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12">
-          <button className="btn-primary">BOOK A CALL</button>
-          <a href="#projects" className="btn-secondary">
+          <button 
+            onClick={() => alert("I'm pressed")} 
+            className="btn-primary cursor-pointer"
+          >
+            BOOK A CALL
+          </button>
+          <button 
+            onClick={() => alert("I'm pressed")} 
+            className="btn-secondary cursor-pointer"
+          >
             Check Projects <ArrowRightIcon className="h-3 w-3" />
-          </a>
+          </button>
         </div>
       </div>
     </section>

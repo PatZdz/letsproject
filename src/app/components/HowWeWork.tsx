@@ -1,73 +1,114 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 
 export default function HowWeWork() {
+  const [activeStep, setActiveStep] = useState(0);
+
   const steps = [
     {
       number: "01",
-      title: "Consultancy",
-      description:
-        "You and us together discuss project guidelines and choose the most suitable cooperation model.",
+      title: "Ideate",
+      description: "Identify, shape and validate your product idea.",
+      image: "/images/howwework_1.png",
     },
     {
       number: "02",
-      title: "Roadmap",
-      description:
-        "Our experts prepare details of the entire project. This allows us to keep the working pace and stick to our goal.",
+      title: "Design",
+      description: "Craft user-friendly designs and wireframes.",
+      image: "/images/howwework_2.png",
     },
     {
       number: "03",
-      title: "Tests",
-      description:
-        "While fulfilling the order, we check various scenarios to make sure the final system is error-free.",
+      title: "Develop",
+      description: "Bring products to life with world-class engineering.",
+      image: "/images/howwework_3.png",
     },
     {
       number: "04",
-      title: "Scope and quote",
-      description:
-        "We draw up a working schedule that is consulted with you on an ongoing basis. We evaluate the project and wait for your approval.",
+      title: "Maintain",
+      description: "Ensure everything runs smoothly after launch.",
+      image: "/images/howwework_4.png",
     },
     {
       number: "05",
-      title: "Development",
-      description:
-        "We get down to work and keep you updated on the work progress at all stages of the task.",
-    },
-    {
-      number: "06",
-      title: "Implementation",
-      description:
-        "We hand the final solution over to you. We implement the ready-made project in your business.",
+      title: "Scale",
+      description: "Expand your product to reach new heights.",
+      image: "/images/howwework_5.png",
     },
   ];
 
   return (
-    <section id="how-we-work" className="py-16 bg-[#F6F4F1]">
-      <div className="container mx-auto">
-        <h2 className="text-[36px] font-extrabold text-center text-[#1A1A1A] mb-12">
-          How we work
+    <section id="how-we-work" className="py-16 md:py-32 bg-[#1A1A1A] text-white">
+      <div className="w-full max-w-[1200px] mx-auto px-4 md:px-0">
+        <h2 className="text-2xl md:text-[36px] font-extrabold text-center text-white mb-12 md:mb-24">
+          How We Work?
         </h2>
-        <div className="relative">
-          <div className="absolute left-1/2 top-0 w-[2px] h-full bg-[#E9E3DD] transform -translate-x-1/2" />
-          <div className="space-y-16">
+        
+        {/* Mobile View */}
+        <div className="md:hidden w-full overflow-x-scroll">
+          <div className="flex gap-4 min-w-max px-4">
             {steps.map((step, index) => (
-              <div key={index} className={`relative flex ${index % 2 === 0 ? 'justify-end' : ''}`}>
-                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-16 text-right' : 'pl-16'}`}>
-                  <div className="bg-[#F0EEEC] rounded-lg p-8">
-                    <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? 'justify-end' : ''}`}>
-                      <span className="text-[24px] font-bold text-[#3257A5] bg-[#E9E3DD] w-[48px] h-[48px] flex items-center justify-center rounded-full">
-                        {step.number}
-                      </span>
-                      <h3 className="text-2xl font-semibold text-[#1A1A1A]">
-                        {step.title}
-                      </h3>
-                    </div>
-                    <p className="text-gray-600">{step.description}</p>
-                  </div>
+              <div 
+                key={step.number}
+                className="w-[280px] bg-[#2A2A2A] p-8 rounded-lg text-center flex flex-col items-center"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-[#3257A5] text-xl font-bold">
+                    {step.number}
+                  </span>
+                  <h3 className="text-2xl font-semibold">
+                    {step.title}
+                  </h3>
+                </div>
+                <Image 
+                  src={step.image}
+                  alt={step.title}
+                  width={84}
+                  height={84}
+                  className="mb-6"
+                />
+                <p className="text-gray-400">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop View */}
+        <div className="hidden md:flex flex-row gap-8 justify-center max-w-[900px] mx-auto">
+          <div className="flex-1 space-y-12">
+            {steps.map((step, index) => (
+              <div
+                key={step.number}
+                onClick={() => setActiveStep(index)}
+                className={`cursor-pointer transition-all duration-300 ${
+                  activeStep === index ? "text-[#3257A5]" : "text-gray-400"
+                }`}
+              >
+                <div className="flex items-center gap-8 hover:translate-x-2 transition-transform duration-300">
+                  <span className="text-[#3257A5] text-2xl font-bold min-w-[40px]">
+                    {step.number}
+                  </span>
+                  <h3 className="text-3xl font-semibold hover:text-[#3257A5] transition-colors duration-300">
+                    {step.title}
+                  </h3>
                 </div>
               </div>
             ))}
+          </div>
+          <div className="flex-1 flex flex-col items-center justify-center">
+            <div className="bg-[#2A2A2A] p-12 rounded-lg shadow-lg text-center w-full">
+              <Image 
+                src={steps[activeStep].image}
+                alt={steps[activeStep].title}
+                width={120}
+                height={120}
+                className="mx-auto mb-8"
+              />
+              <h3 className="text-4xl font-bold mb-4">{steps[activeStep].title}</h3>
+              <p className="text-xl text-gray-400">{steps[activeStep].description}</p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,24 +1,23 @@
-import './globals.css'
-import { Metadata } from 'next';
-import Cookies from './components/Cookies';
-import Script from 'next/script'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'LetsProject - Łatwe zarządzanie obiektami sportowymi',
-  description: 'Osiągnij swoje cele fitness z FitWise.',
+  title: "LetsProject - Design & Development Agency",
+  description: "Digital Solutions for Ambitious Brands",
 };
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="pl">
-      <body>
+    <html lang="en">
+      <body className={inter.className}>
         {children}
-        <Cookies />
-        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       </body>
     </html>
   );

@@ -74,9 +74,12 @@ export default function Services() {
                 </div>
               </div>
               <p className="text-gray-600 mb-4">{service.description}</p>
-              <a href="#" className="btn-secondary self-end">
+              <button 
+                onClick={() => alert("I'm pressed")} 
+                className="btn-secondary self-end cursor-pointer"
+              >
                 I NEED THIS! <ArrowRightIcon className="h-3 w-3" />
-              </a>
+              </button>
             </div>
           ))}
         </div>

@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import Navbar from '@/app/components/Navbar';
-import Footer from '@/app/components/Footer';
 import Header from './components/Header';
 import Mission from './components/Mission';
 import Team from './components/Team';
@@ -17,7 +16,6 @@ export default function AboutPage() {
         <Mission />
         <Team />
       </main>
-      <Footer />
     </div>
   );
 }

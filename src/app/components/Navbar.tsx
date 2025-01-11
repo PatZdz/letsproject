@@ -12,6 +12,7 @@ interface NavbarProps {
 
 export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
   const [showNavbar, setShowNavbar] = useState(true);
+  
   useEffect(() => {
     let lastScrollY = window.pageYOffset;
 
@@ -20,7 +21,6 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
       setShowNavbar(currentScrollY <= lastScrollY);
       lastScrollY = currentScrollY;
       
-      // Close drawer menu on scroll
       if (isDrawerOpen) {
         setIsDrawerOpen(false);
       }
@@ -34,18 +34,7 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
   }, [isDrawerOpen, setIsDrawerOpen]);
 
   useEffect(() => {
-    if (isDrawerOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-  }, [isDrawerOpen]);
-  useEffect(() => {
-    if (isDrawerOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = isDrawerOpen ? "hidden" : "";
   }, [isDrawerOpen]);
 
   return (
@@ -56,7 +45,6 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
     >
       <div className="w-full max-w-[1200px] mx-auto px-4 md:px-[22px] py-4 bg-[#1D1E22] shadow-md rounded-lg relative z-20">
         <nav className="flex items-center relative">
-          {/* Logo */}
           <div className="flex items-center">
             <Link href="/">
               <Image
@@ -70,7 +58,6 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <ul className="hidden md:flex gap-6 items-center absolute left-1/2 transform -translate-x-1/2">
             <li>
               <Link href="#projects" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5]">
@@ -99,14 +86,10 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
             </li>
           </ul>
 
-          {/* Desktop CTA Button */}
-          <button
-            className="hidden md:block btn-primary ml-auto"
-          >
+          <button className="hidden md:block btn-primary ml-auto">
             CONTACT US
           </button>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden ml-auto text-[#F6F4F1]"
             onClick={() => setIsDrawerOpen(!isDrawerOpen)}
@@ -120,8 +103,7 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
         </nav>
       </div>
 
-      {/* Mobile Drawer Menu */}
-      <div className="fixed left-0 right-0 px-4 z-10">
+      <div className={`fixed left-0 right-0 px-4 z-10 ${!isDrawerOpen ? 'pointer-events-none' : ''}`}>
         <div
           className={`w-full max-w-[1200px] mx-auto bg-[#1D1E22] shadow-md rounded-lg mt-2 transition-all duration-300 origin-top ${
             isDrawerOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0'
