@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
-import Pricing from "./components/Pricing";
-import Contact from "./components/Contact";
 import WhyChooseUs from "./components/WhyChooseUs";
 import HowWeWork from "./components/HowWeWork";
 import FAQ from "./components/FAQ";
