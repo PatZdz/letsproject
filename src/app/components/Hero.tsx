@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="hero bg-[#F6F4F1] pt-32 md:pt-64 pb-24 md:pb-48 relative overflow-hidden">
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[181px] h-[151px] md:w-[281px] md:h-[221px] pointer-events-none">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[281px] h-[221px] md:w-[381px] md:h-[301px] pointer-events-none">
         <Image
           src="/star_hero.svg"
           alt=""
