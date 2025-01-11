@@ -1,5 +1,7 @@
 "use client";
 
+"don't"  // zamiast "don't"
+
 import React from "react";
 import Image from "next/image";
 export default function WhyChooseUs() {
@@ -17,7 +19,7 @@ export default function WhyChooseUs() {
       icon: "/images/whychooseus_2.png",
     },
     {
-      title: "Cutting-Edge Tech",
+      title: "Cutting-Edge Tech ",
       description:
         "We stay on top of the latest industry trends to ensure your digital presence meets your customers' expectations. Whether we're coding a Flutter mobile app or customizing an eCommerce platform, we prioritize performance and scalability.",
       icon: "/images/whychooseus_3.png",

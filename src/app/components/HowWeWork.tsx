@@ -32,7 +32,7 @@ export default function HowWeWork() {
       image: "/images/howwework_4.png",
     },
     {
-      number: "05",
+      number: "0 5",
       title: "Scale",
       description: "Expand your product to reach new heights.",
       image: "/images/howwework_5.png",
@@ -49,7 +49,7 @@ export default function HowWeWork() {
         {/* Mobile View */}
         <div className="md:hidden w-full overflow-x-scroll">
           <div className="flex gap-4 min-w-max px-4">
-            {steps.map((step, index) => (
+            {steps.map((step) => (
               <div 
                 key={step.number}
                 className="w-[280px] bg-[#2A2A2A] p-8 rounded-lg text-center flex flex-col items-center"
