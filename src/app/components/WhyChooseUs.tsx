@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
     {
       title: "Cutting-Edge Tech ",
       description:
-        "We stay on top of the latest industry trends to ensure your digital presence meets your customers&apos; expectations. Whether we&apos;re coding a Flutter mobile app or customizing an eCommerce platform, we prioritize performance and scalability.",
+        "We keep up with the latest industry trends to ensure your digital presence exceeds your customers’ expectations. Whether it’s crafting a Flutter mobile app or tailoring an eCommerce platform, we focus on delivering top-notch performance and scalability.",
       icon: "/images/whychooseus_3.png",
     },
   ];
@@ -49,7 +49,7 @@ export default function WhyChooseUs() {
                   </h3>
                 </div>
               </div>
-              <p className="text-gray-600 mb-4">{features[0].description}</p>
+              <p className="text-[#4b5563] mb-4">{features[0].description}</p>
               <button className="btn-primary mt-auto self-center">
                 LET&apos;S TALK ABOUT YOUR PROJECT
               </button>
@@ -77,7 +77,7 @@ export default function WhyChooseUs() {
                       </h3>
                     </div>
                   </div>
-                  <p className="text-gray-400">{feature.description}</p>
+                  <p className="text-[#4b5563]">{feature.description}</p>
                 </div>
               ))}
             </div>

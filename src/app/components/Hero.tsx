@@ -12,7 +12,7 @@ export default function Hero() {
           src="/star_hero.svg"
           alt=""
           fill
-          className="object-contain opacity-50"
+          className="object-contain opacity-50 animate-spin-slow"
           priority
         />
       </div>

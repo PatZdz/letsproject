@@ -13,6 +13,9 @@ export default {
         'cta': '#5992FF',
         'cta-hover': '#4B7EE6',
       },
+      animation: {
+        'spin-slow': 'spin 20s linear infinite',
+      },
     },
   },
   plugins: [],

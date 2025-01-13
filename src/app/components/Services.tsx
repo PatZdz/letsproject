@@ -48,7 +48,7 @@ export default function Services() {
               key={index}
               className="bg-[#F0EEEC] rounded-lg p-6 md:p-[30px] flex flex-col"
             >
-              <div className="flex gap-4 md:gap-6 mb-4 md:mb-6">
+              <div className="flex gap-4 md:gap-6 mb-2 md:mb-6">
                 <div className="w-[60px] h-[60px] md:w-[76px] md:h-[76px] rounded-full bg-[#E9E3DD] flex items-center justify-center flex-shrink-0">
                   <Image
                     src={service.icon}
@@ -57,15 +57,15 @@ export default function Services() {
                     height={42}
                   />
                 </div>
-                <div className="flex flex-col justify-between h-[76px]">
-                  <h3 className="font-semibold text-xl md:text-[30px] text-[#1A1A1A]">
+                <div className="h-[60px] md:h-[76px] flex flex-col justify-center md:justify-between">
+                  <h3 className="font-semibold text-2xl md:text-[30px] text-[#1A1A1A]">
                     {service.title}
                   </h3>
-                  <div className="flex flex-wrap gap-[6px]">
+                  <div className="hidden md:flex md:flex-wrap md:gap-[4px]">
                     {service.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 text-[12px] font-normal bg-[#E9E3DD] text-[#9D958B] rounded-full border border-[#9D958B]"
+                        className="px-2 py-1 text-[11px] font-normal bg-[#E9E3DD] text-[#9D958B] rounded-full border border-[#9D958B]"
                       >
                         {tag}
                       </span>
@@ -73,7 +73,17 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-600 mb-4">{service.description}</p>
+              <div className="flex flex-wrap gap-[2px] mb-4 md:hidden">
+                {service.tags.map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="px-2 py-1 text-[10px] font-normal bg-[#E9E3DD] text-[#9D958B] rounded-full border border-[#9D958B]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <p className="text-[#4b5563] mb-4">{service.description}</p>
               <button 
                 onClick={() => alert("I'm pressed")} 
                 className="btn-secondary self-end cursor-pointer"

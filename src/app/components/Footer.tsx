@@ -5,25 +5,27 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="w-full bg-transparent px-4 md:px-0 py-8">
-      <div className="w-full max-w-[1200px] mx-auto px-4 md:px-[42px] bg-[#1D1E22] rounded-lg h-auto md:h-[320px]">
-        <div className="flex flex-col md:flex-row h-full py-8 md:py-12">
-          {/* Left Column */}
-          <div className="flex flex-col space-y-8 md:w-2/5">
+      <div className="w-full max-w-[1200px] mx-auto px-8 md:px-[72px] bg-[#1D1E22] rounded-lg">
+        <div className="flex flex-col md:flex-row justify-between py-12 md:py-16">
+          {/* Left Column - Logo and Address */}
+          <div className="flex flex-row md:flex-row md:items-center gap-12">
             <Link href="/">
               <Image
                 src="/letsproject_logo_beige.svg"
                 alt="LetsProject Logo"
-                width={160}
-                height={54}
-                className="w-auto h-[54px]"
+                width={200}
+                height={68}
+                className="w-auto h-[68px]"
                 priority
               />
             </Link>
-            <div className="text-[#F6F4F1] space-y-2">
-              <p className="text-sm font-semibold">LetsProject Sp. z o.o.</p>
-              <div className="text-sm opacity-80 space-y-1">
+            <div className="text-[#F6F4F1] space-y-1">
+              <p className="text-xs font-semibold opacity-60">LetsProject Sp. z o.o.</p>
+              <div className="text-xs opacity-40 space-y-0.5">
                 <p>123 Tech Street</p>
                 <p>00-001 Warsaw, Poland</p>
                 <p>+48 123 456 789</p>
@@ -32,46 +34,51 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Right side navigation columns */}
-          <div className="flex justify-end mt-8 md:mt-0 md:w-3/5 gap-16">
-            {/* Navigation Column */}
-            <div>
-              <h3 className="text-[#F6F4F1] text-sm font-semibold mb-4">Navigation</h3>
-              <nav className="flex flex-col gap-3">
-                <Link href="#projects" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5] transition-colors">
+          {/* Right Column - Navigation and Legal */}
+          <div className="mt-12 md:mt-0">
+            <div className="mb-8">
+              <h3 className="text-[#F6F4F1] text-xs font-semibold mb-3 opacity-60">Navigation</h3>
+              <nav className="flex gap-6">
+                <Link href="#projects" className="text-[10px] font-semibold text-[#F6F4F1] opacity-40 hover:text-[#3257A5] hover:opacity-100 transition-all">
                   PROJECTS
                 </Link>
-                <Link href="#services" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5] transition-colors">
+                <Link href="#services" className="text-[10px] font-semibold text-[#F6F4F1] opacity-40 hover:text-[#3257A5] hover:opacity-100 transition-all">
                   SERVICES
                 </Link>
-                <Link href="#pricing" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5] transition-colors">
+                <Link href="#pricing" className="text-[10px] font-semibold text-[#F6F4F1] opacity-40 hover:text-[#3257A5] hover:opacity-100 transition-all">
                   PRICING
                 </Link>
-                <Link href="#about" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5] transition-colors">
+                <Link href="#about" className="text-[10px] font-semibold text-[#F6F4F1] opacity-40 hover:text-[#3257A5] hover:opacity-100 transition-all">
                   ABOUT
                 </Link>
-                <Link href="#resources" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5] transition-colors">
+                <Link href="#resources" className="text-[10px] font-semibold text-[#F6F4F1] opacity-40 hover:text-[#3257A5] hover:opacity-100 transition-all">
                   CAREER
                 </Link>
               </nav>
             </div>
 
-            {/* Legal Column */}
             <div>
-              <h3 className="text-[#F6F4F1] text-sm font-semibold mb-4">Legal</h3>
-              <nav className="flex flex-col gap-3">
-                <Link href="/privacy" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5] transition-colors">
+              <h3 className="text-[#F6F4F1] text-xs font-semibold mb-3 opacity-60">Legal</h3>
+              <nav className="flex gap-6">
+                <Link href="/privacy" className="text-[10px] font-semibold text-[#F6F4F1] opacity-40 hover:text-[#3257A5] hover:opacity-100 transition-all">
                   PRIVACY POLICY
                 </Link>
-                <Link href="/terms" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5] transition-colors">
+                <Link href="/terms" className="text-[10px] font-semibold text-[#F6F4F1] opacity-40 hover:text-[#3257A5] hover:opacity-100 transition-all">
                   TERMS OF SERVICE
                 </Link>
-                <Link href="/cookies" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5] transition-colors">
+                <Link href="/cookies" className="text-[10px] font-semibold text-[#F6F4F1] opacity-40 hover:text-[#3257A5] hover:opacity-100 transition-all">
                   COOKIES POLICY
                 </Link>
               </nav>
             </div>
           </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="text-center pt-4 pb-8">
+          <p className="text-[#F6F4F1] text-xs opacity-40">
+            ©{currentYear} LetsProject. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
