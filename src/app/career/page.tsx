@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
-import HeroSection from '@/app/career/components/HeroSection';
+import HeroSection from '@/app/career/components/HeroCareer';
 
 export default function Career() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
