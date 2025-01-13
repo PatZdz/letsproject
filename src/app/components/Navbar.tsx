@@ -80,7 +80,7 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
               </Link>
             </li>
             <li>
-              <Link href="#resources" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5]">
+              <Link href="/career" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5]">
                 CAREER
               </Link>
             </li>
@@ -139,7 +139,7 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
               ABOUT
             </Link>
             <Link 
-              href="#resources" 
+              href="/career" 
               className="text-[16px] font-semibold text-[#F6F4F1]"
               onClick={() => setIsDrawerOpen(false)}
             >
