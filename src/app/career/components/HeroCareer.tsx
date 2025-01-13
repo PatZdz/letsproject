@@ -9,7 +9,7 @@ export default function HeroSection() {
               Join Our Team
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Build your career with us and be part of something extraordinary. We're creating the future of digital experiences.
+              Build your career with us and be part of something extraordinary. We&apos;re creating the future of digital experiences.
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="bg-[#F0EEEC] rounded-lg p-4">
@@ -40,7 +40,8 @@ export default function HeroSection() {
               />
             </div>
             <p className="text-[#4b5563]">
-            We're not currently hiring, but we're always eager to connect with talented and passionate individuals who share our vision. While there may not be any open positions at the moment, we encourage you to stay in touch and check back regularly for future opportunities to join our dynamic and innovative team.            </p>
+              We&apos;re not currently hiring, but we&apos;re always eager to connect with talented and passionate individuals who share our vision. While there may not be any open positions at the moment, we encourage you to stay in touch and check back regularly for future opportunities to join our dynamic and innovative team.
+            </p>
           </div>
         </div>
       </section>
