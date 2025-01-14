@@ -3,8 +3,11 @@
 import React from "react";
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
 
 export default function Services() {
+  const router = useRouter();
+  
   const services = [
     {
       title: "Website Development",
@@ -73,16 +76,6 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-[2px] mb-4 md:hidden">
-                {service.tags.map((tag, idx) => (
-                  <span
-                    key={idx}
-                    className="px-2 py-1 text-[10px] font-normal bg-[#E9E3DD] text-[#9D958B] rounded-full border border-[#9D958B]"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
               <p className="text-[#4b5563] mb-4">{service.description}</p>
               <button 
                 onClick={() => alert("I'm pressed")} 
@@ -97,7 +90,12 @@ export default function Services() {
           <p className="text-xl md:text-[24px] font-semibold text-[#1D1E22] mb-4">
             Do you need a project that includes multiple services?
           </p>
-          <button className="btn-primary">GET A FREE CONSULTATION</button>
+          <button 
+            onClick={() => router.push('/contact')} 
+            className="btn-primary"
+          >
+            GET A FREE CONSULTATION
+          </button>
         </div>
       </div>
     </section>

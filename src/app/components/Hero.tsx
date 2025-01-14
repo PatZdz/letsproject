@@ -3,13 +3,16 @@
 import React from "react";
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
 
 export default function Hero() {
+  const router = useRouter();
+
   return (
     <section className="hero bg-[#F6F4F1] pt-32 md:pt-64 pb-24 md:pb-48 relative overflow-hidden">
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[281px] h-[221px] md:w-[381px] md:h-[301px] pointer-events-none">
         <Image
-          src="/star_hero.svg"
+          src="vectors/star_hero.svg"
           alt=""
           fill
           className="object-contain opacity-50 animate-spin-slow"
@@ -29,7 +32,7 @@ export default function Hero() {
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12">
           <button 
-            onClick={() => alert("I'm pressed")} 
+            onClick={() => router.push('/contact')} 
             className="btn-primary cursor-pointer"
           >
             BOOK A CALL

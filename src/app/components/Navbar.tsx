@@ -48,7 +48,7 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
           <div className="flex items-center">
             <Link href="/">
               <Image
-                src="/letsproject_logo_beige.svg"
+                src="vectors//letsproject_logo_beige.svg"
                 alt="LetsProject Logo"
                 width={108}
                 height={36}
@@ -85,10 +85,9 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
               </Link>
             </li>
           </ul>
-
-          <button className="hidden md:block btn-primary ml-auto">
+          <Link href="/contact" className="hidden md:block btn-primary ml-auto">
             CONTACT US
-          </button>
+          </Link>
 
           <button
             className="md:hidden ml-auto text-[#F6F4F1]"

@@ -8,14 +8,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-transparent px-4 md:px-0 py-8">
+    <footer className="w-full bg-transparent px-4 md:px-0 py-8 mt-12 md:mt-0">
       <div className="w-full max-w-[1200px] mx-auto px-8 md:px-[72px] bg-[#1D1E22] rounded-lg">
         <div className="flex flex-col md:flex-row justify-between py-12 md:py-16">
-          {/* Left Column - Logo and Address */}
           <div className="flex flex-row md:flex-row md:items-center gap-12">
             <Link href="/">
               <Image
-                src="/letsproject_logo_beige.svg"
+                src="vectors/letsproject_logo_beige.svg"
                 alt="LetsProject Logo"
                 width={200}
                 height={68}
@@ -34,11 +33,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Right Column - Navigation and Legal */}
           <div className="mt-12 md:mt-0">
-            <div className="mb-8">
-              <h3 className="text-[#F6F4F1] text-xs font-semibold mb-3 opacity-60">Navigation</h3>
-              <nav className="flex gap-6">
+            <div className="mb-6 md:mb-8">
+              <h3 className="text-[#F6F4F1] text-xs font-semibold mb-2 opacity-60">Navigation</h3>
+              <nav className="flex gap-4 md:gap-6">
                 <Link href="#projects" className="text-[10px] font-semibold text-[#F6F4F1] opacity-40 hover:text-[#3257A5] hover:opacity-100 transition-all">
                   PROJECTS
                 </Link>
@@ -58,8 +56,8 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-[#F6F4F1] text-xs font-semibold mb-3 opacity-60">Legal</h3>
-              <nav className="flex gap-6">
+              <h3 className="text-[#F6F4F1] text-xs font-semibold mb-2 opacity-60">Legal</h3>
+              <nav className="flex gap-4 md:gap-6">
                 <Link href="/privacy" className="text-[10px] font-semibold text-[#F6F4F1] opacity-40 hover:text-[#3257A5] hover:opacity-100 transition-all">
                   PRIVACY POLICY
                 </Link>
@@ -74,7 +72,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="text-center pt-4 pb-8">
           <p className="text-[#F6F4F1] text-xs opacity-40">
             ©{currentYear} LetsProject. All rights reserved.

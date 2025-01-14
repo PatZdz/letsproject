@@ -2,13 +2,16 @@
 
 import React from "react";
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
 
 export default function WhyChooseUs() {
+  const router = useRouter();
+  
   const features = [
     {
       title: "Full-Service Agency",
       description:
-        "Our approach combines user-centred methodologies with analytics to create experiences that convert. From eye-catching visuals to seamless interactions, every detail is fine-tuned to improve the bottom line. We&apos;ll do everything for you from start to finish with the same set price that won&apos;t change.",
+        "Our approach combines user-centred methodologies with analytics to create experiences that convert. From eye-catching visuals to seamless interactions, every detail is fine-tuned to improve the bottom line. We'll do everything for you from start to finish with the same set price that won't change.",
       icon: "/images/whychooseus_1.png",
     },
     {
@@ -20,7 +23,7 @@ export default function WhyChooseUs() {
     {
       title: "Cutting-Edge Tech ",
       description:
-        "We keep up with the latest industry trends to ensure your digital presence exceeds your customers’ expectations. Whether it’s crafting a Flutter mobile app or tailoring an eCommerce platform, we focus on delivering top-notch performance and scalability.",
+        "We keep up with the latest industry trends to ensure your digital presence exceeds your customers' expectations. Whether it's crafting a Flutter mobile app or tailoring an eCommerce platform, we focus on delivering top-notch performance and scalability.",
       icon: "/images/whychooseus_3.png",
     },
   ];
@@ -50,8 +53,11 @@ export default function WhyChooseUs() {
                 </div>
               </div>
               <p className="text-[#4b5563] mb-4">{features[0].description}</p>
-              <button className="btn-primary mt-auto self-center">
-                LET&apos;S TALK ABOUT YOUR PROJECT
+              <button 
+                onClick={() => router.push('/contact')} 
+                className="btn-primary mt-auto self-center"
+              >
+                LET'S TALK ABOUT YOUR PROJECT
               </button>
             </div>
           </div>
