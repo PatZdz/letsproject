@@ -11,7 +11,7 @@ export default function WhyChooseUs() {
     {
       title: "Full-Service Agency",
       description:
-        "Our approach combines user-centred methodologies with analytics to create experiences that convert. From eye-catching visuals to seamless interactions, every detail is fine-tuned to improve the bottom line. We'll do everything for you from start to finish with the same set price that won't change.",
+        "Our approach combines user-centred methodologies with analytics to create experiences that convert. From eye-catching visuals to seamless interactions, every detail is fine-tuned to improve the bottom line. We&apos;ll do everything for you from start to finish with the same set price that won&apos;t change.",
       icon: "/images/whychooseus_1.png",
     },
     {
@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
     {
       title: "Cutting-Edge Tech ",
       description:
-        "We keep up with the latest industry trends to ensure your digital presence exceeds your customers' expectations. Whether it's crafting a Flutter mobile app or tailoring an eCommerce platform, we focus on delivering top-notch performance and scalability.",
+        "We keep up with the latest industry trends to ensure your digital presence exceeds your customers&apos; expectations. Whether it&apos;s crafting a Flutter mobile app or tailoring an eCommerce platform, we focus on delivering top-notch performance and scalability.",
       icon: "/images/whychooseus_3.png",
     },
   ];
@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
                 onClick={() => router.push('/contact')} 
                 className="btn-primary mt-auto self-center"
               >
-                LET'S TALK ABOUT YOUR PROJECT
+                LET&apos;S TALK ABOUT YOUR PROJECT
               </button>
             </div>
           </div>
