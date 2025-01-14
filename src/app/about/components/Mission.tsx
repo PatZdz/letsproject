@@ -23,10 +23,10 @@ export default function Team() {
           </div>
           <div className="w-full lg:w-1/2">
             <h3 className="text-2xl md:text-4xl font-bold mb-6 text-[#1A1A1A] text-center lg:text-left">
-              Aesthetics and functionality matter
+              Aesthetics and functionality count
             </h3>
             <p className="text-gray-600 mb-8">
-              At LetsProject, we believe that every brand deserves unique and functional digital solutions. Our mission is to create websites, mobile applications, and branding strategies that not only stand out with their aesthetics but also support the growth of our clients' businesses.
+              At LetsProject, we believe that every brand deserves unique and functional digital solutions. Our mission is to create websites, mobile applications, and branding strategies that not only stand out with their aesthetics but also support the growth of our clients&apos; businesses.
             </p>
           </div>
         </div>

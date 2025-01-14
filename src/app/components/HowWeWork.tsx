@@ -32,7 +32,7 @@ export default function HowWeWork() {
       image: "/images/howwework_4.png",
     },
     {
-      number: "0 5",
+      number: "05",
       title: "Scale",
       description: "Expand your product to reach new heights.",
       image: "/images/howwework_5.png",
