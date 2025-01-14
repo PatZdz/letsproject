@@ -75,7 +75,7 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
               </Link>
             </li>
             <li>
-              <Link href="#about" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5]">
+              <Link href="/about" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5]">
                 ABOUT
               </Link>
             </li>
@@ -131,7 +131,7 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
               PRICING
             </Link>
             <Link 
-              href="#about" 
+              href="/about" 
               className="text-[16px] font-semibold text-[#F6F4F1]"
               onClick={() => setIsDrawerOpen(false)}
             >
