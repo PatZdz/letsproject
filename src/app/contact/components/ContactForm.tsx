@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { ChevronDownIcon, StarIcon } from '@heroicons/react/24/solid';
 
 interface Testimonial {
@@ -39,8 +39,11 @@ const testimonials: Testimonial[] = [
 ];
 
 export default function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
   const [budget, setBudget] = useState(1000);
   const [currency, setCurrency] = useState<'EUR' | 'USD' | 'PLN'>('EUR');
+  const [selectedExpectations, setSelectedExpectations] = useState<string[]>([]);
+  const [buttonState, setButtonState] = useState<'default' | 'sending' | 'success'>('default');
 
   const currencySymbols = {
     EUR: '€',
@@ -54,8 +57,56 @@ export default function ContactForm() {
     PLN: { min: 2000, max: 200000 }
   };
 
+  const handleExpectationsChange = (value: string) => {
+    if (buttonState === 'success') return;
+    setSelectedExpectations(prev => 
+      prev.includes(value) 
+        ? prev.filter(item => item !== value)
+        : [...prev, value]
+    );
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (buttonState === 'success') return;
+    
+    setButtonState('sending');
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      fullName: formData.get('fullName'),
+      company: formData.get('company'),
+      email: formData.get('email'),
+      expectations: JSON.stringify(selectedExpectations),
+      budget: budget,
+      currency: currency,
+      howWeCanHelp: formData.get('howWeCanHelp'),
+      howDidYouHear: formData.get('howDidYouHear'),
+      nda: formData.get('nda') ? 1 : 0,
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setButtonState('success');
+        formRef.current?.reset();
+        setSelectedExpectations([]);
+        setBudget(currencyRanges[currency].min);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setButtonState('default');
+    }
+  };
+
   return (
-    <section className="w-full px-4 md:px-0 py-32 md:py-48">
+    <section className="w-full px-4 md:px-0 py-32 md:py-48 relative">
       <div className="max-w-[1200px] mx-auto">
         <h2 className="text-[36px] font-extrabold text-center text-[#1A1A1A] mb-12">
           Contact
@@ -88,53 +139,50 @@ export default function ContactForm() {
           </div>
 
           <div className="w-full lg:basis-3/5 order-1 lg:order-2">
-            <form className="w-full bg-white p-6 md:p-10 rounded-lg flex flex-col gap-6 md:gap-8">
+            <form ref={formRef} onSubmit={handleSubmit} className="w-full bg-white p-6 md:p-10 rounded-lg flex flex-col gap-6 md:gap-8">
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="flex-1">
-                  <label
-                    htmlFor="fullName"
-                    className="text-sm font-semibold block mb-1"
-                  >
+                  <label htmlFor="fullName" className="text-sm font-semibold block mb-1">
                     Full Name
                   </label>
                   <input
                     id="fullName"
                     name="fullName"
                     type="text"
+                    required
                     className="w-full border border-gray-300 rounded-md p-4 text-sm"
                     placeholder="Your name"
+                    disabled={buttonState === 'success'}
                   />
                 </div>
                 <div className="flex-1">
-                  <label
-                    htmlFor="company"
-                    className="text-sm font-semibold block mb-1"
-                  >
+                  <label htmlFor="company" className="text-sm font-semibold block mb-1">
                     Your company
                   </label>
                   <input
                     id="company"
                     name="company"
                     type="text"
+                    required
                     className="w-full border border-gray-300 rounded-md p-4 text-sm"
                     placeholder="Your company"
+                    disabled={buttonState === 'success'}
                   />
                 </div>
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="text-sm font-semibold block mb-1"
-                >
+                <label htmlFor="email" className="text-sm font-semibold block mb-1">
                   E-mail
                 </label>
                 <input
                   id="email"
                   name="email"
                   type="email"
+                  required
                   className="w-full border border-gray-300 rounded-md p-4 text-sm"
                   placeholder="Your e-mail"
+                  disabled={buttonState === 'success'}
                 />
               </div>
 
@@ -146,13 +194,16 @@ export default function ContactForm() {
                   {["Website", "Mobile App", "Branding", "Ecommerce", "UXUI Audit"].map((option, index) => (
                     <label
                       key={index}
-                      className="cursor-pointer"
+                      className={`cursor-pointer ${buttonState === 'success' ? 'pointer-events-none opacity-50' : ''}`}
                     >
                       <input
                         type="checkbox"
                         name="expectations"
                         value={option}
+                        checked={selectedExpectations.includes(option)}
+                        onChange={() => handleExpectationsChange(option)}
                         className="peer hidden"
+                        disabled={buttonState === 'success'}
                       />
                       <span className="inline-block px-4 py-2 text-sm border border-gray-300 rounded-md hover:border-[#3257A5] hover:text-[#3257A5] peer-checked:bg-[#3257A5] peer-checked:text-white peer-checked:border-[#3257A5] transition-colors">
                         {option}
@@ -172,6 +223,7 @@ export default function ContactForm() {
                       key={curr}
                       type="button"
                       onClick={() => {
+                        if (buttonState === 'success') return;
                         setCurrency(curr as 'EUR' | 'USD' | 'PLN');
                         setBudget(currencyRanges[curr as keyof typeof currencyRanges].min);
                       }}
@@ -179,7 +231,8 @@ export default function ContactForm() {
                         currency === curr 
                           ? 'bg-[#3257A5] text-white' 
                           : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                      }`}
+                      } ${buttonState === 'success' ? 'opacity-50 cursor-not-allowed' : ''}`}
+                      disabled={buttonState === 'success'}
                     >
                       {curr}
                     </button>
@@ -191,8 +244,14 @@ export default function ContactForm() {
                   max={currencyRanges[currency].max}
                   step={currency === 'PLN' ? 2000 : 1000}
                   value={budget}
-                  onChange={(e) => setBudget(parseInt(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#3257A5]"
+                  onChange={(e) => {
+                    if (buttonState === 'success') return;
+                    setBudget(parseInt(e.target.value));
+                  }}
+                  className={`w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#3257A5] ${
+                    buttonState === 'success' ? 'opacity-50' : ''
+                  }`}
+                  disabled={buttonState === 'success'}
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>{currencyRanges[currency].min.toLocaleString()}{currencySymbols[currency]}</span>
@@ -202,10 +261,7 @@ export default function ContactForm() {
               </div>
 
               <div>
-                <label
-                  htmlFor="howWeCanHelp"
-                  className="text-sm font-semibold block mb-1"
-                >
+                <label htmlFor="howWeCanHelp" className="text-sm font-semibold block mb-1">
                   How can we help you?
                 </label>
                 <textarea
@@ -214,20 +270,19 @@ export default function ContactForm() {
                   className="w-full border border-gray-300 rounded-md p-2 text-sm"
                   placeholder="Tell us about your product and your nearest plans on the design engagement"
                   rows={6}
+                  disabled={buttonState === 'success'}
                 ></textarea>
               </div>
 
               <div className="relative">
-                <label
-                  htmlFor="howDidYouHear"
-                  className="text-sm font-semibold block mb-1"
-                >
+                <label htmlFor="howDidYouHear" className="text-sm font-semibold block mb-1">
                   How did you hear about us?
                 </label>
                 <select
                   id="howDidYouHear"
                   name="howDidYouHear"
                   className="w-full border border-gray-300 rounded-md p-4 pr-10 text-sm appearance-none"
+                  disabled={buttonState === 'success'}
                 >
                   <option value="-">-</option>
                   <option value="Google">Google</option>
@@ -252,6 +307,7 @@ export default function ContactForm() {
                   id="nda"
                   name="nda"
                   className="mt-1"
+                  disabled={buttonState === 'success'}
                 />
                 <label htmlFor="nda" className="text-sm text-gray-600">
                   This message is to be covered by a Non-Disclosure Agreement (NDA).
@@ -260,9 +316,12 @@ export default function ContactForm() {
 
               <button
                 type="submit"
-                className="btn-primary mt-4 w-full"
+                disabled={buttonState === 'sending' || buttonState === 'success'}
+                className={`btn-primary mt-4 w-full ${(buttonState === 'sending' || buttonState === 'success') ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
-                SEND
+                {buttonState === 'sending' && 'SENDING...'}
+                {buttonState === 'success' && 'SENT SUCCESSFULLY 👍'}
+                {buttonState === 'default' && 'SEND'}
               </button>
               <p className="text-xs text-gray-600 mt-2">
                 By clicking on the button, you consent to the processing of

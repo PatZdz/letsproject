@@ -1,22 +1,16 @@
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
 
-export const wishlistTable = sqliteTable("wishlist", {
-  id: int().primaryKey({ autoIncrement: true }),
-  email: text().notNull().unique(),
-  createdAt: text().default(sql`CURRENT_TIMESTAMP`),
-});
-
 export const contactFormTable = sqliteTable("contact_form", {
   id: int().primaryKey({ autoIncrement: true }),
-  name: text().notNull(),
-  email: text().notNull(),
-  phone: text(),
+  fullName: text().notNull(),
   company: text().notNull(),
-  location: text(),
-  facilityType: text().notNull(),
-  otherFacilityType: text(),
-  facilityCount: text().notNull(),
-  message: text(),
+  email: text().notNull(),
+  expectations: text().notNull(), // Will store as JSON string
+  budget: int().notNull(),
+  currency: text().notNull(),
+  howWeCanHelp: text(),
+  howDidYouHear: text(),
+  nda: int(), // Will store as 0 or 1
   createdAt: text().default(sql`CURRENT_TIMESTAMP`),
 });
