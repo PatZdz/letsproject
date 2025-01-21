@@ -43,10 +43,10 @@ export default function FastAppProject() {
           </div>
 
           {/* Right Column - Image */}
-          <div className="md:w-3/5">
-            <div className="relative h-[300px] md:h-[500px]">
+          <div className="md:w-3/5 aspect-[4/3]">
+            <div className="relative w-full h-full">
               <Image
-                src="/images/about_2.jpg"
+                src="/images/project_3.jpg"
                 alt="FastApp Project"
                 fill
                 className="object-cover"
