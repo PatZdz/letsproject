@@ -38,7 +38,7 @@ export default function Hero() {
             BOOK A CALL
           </button>
           <button 
-            onClick={() => alert("I'm pressed")} 
+            onClick={() => router.push('/projects')} 
             className="btn-secondary cursor-pointer"
           >
             Check Projects <ArrowRightIcon className="h-3 w-3" />

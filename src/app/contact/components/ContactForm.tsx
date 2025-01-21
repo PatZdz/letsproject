@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { ChevronDownIcon, StarIcon } from '@heroicons/react/24/solid';
 
 interface Testimonial {
@@ -39,6 +39,21 @@ const testimonials: Testimonial[] = [
 ];
 
 export default function ContactForm() {
+  const [budget, setBudget] = useState(1000);
+  const [currency, setCurrency] = useState<'EUR' | 'USD' | 'PLN'>('EUR');
+
+  const currencySymbols = {
+    EUR: '€',
+    USD: '$',
+    PLN: 'zł'
+  };
+
+  const currencyRanges = {
+    EUR: { min: 1000, max: 50000 },
+    USD: { min: 1000, max: 50000 },
+    PLN: { min: 2000, max: 200000 }
+  };
+
   return (
     <section className="w-full px-4 md:px-0 py-32 md:py-48">
       <div className="max-w-[1200px] mx-auto">
@@ -121,6 +136,69 @@ export default function ContactForm() {
                   className="w-full border border-gray-300 rounded-md p-4 text-sm"
                   placeholder="Your e-mail"
                 />
+              </div>
+
+              <div>
+                <label className="text-sm font-semibold block mb-1">
+                  What do you expect from us?
+                </label>
+                <div className="flex flex-wrap gap-2">
+                  {["Website", "Mobile App", "Branding", "Ecommerce", "UXUI Audit"].map((option, index) => (
+                    <label
+                      key={index}
+                      className="cursor-pointer"
+                    >
+                      <input
+                        type="checkbox"
+                        name="expectations"
+                        value={option}
+                        className="peer hidden"
+                      />
+                      <span className="inline-block px-4 py-2 text-sm border border-gray-300 rounded-md hover:border-[#3257A5] hover:text-[#3257A5] peer-checked:bg-[#3257A5] peer-checked:text-white peer-checked:border-[#3257A5] transition-colors">
+                        {option}
+                      </span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="text-sm font-semibold block mb-3">
+                  What budget do you have?
+                </label>
+                <div className="flex gap-2 mb-4">
+                  {['EUR', 'USD', 'PLN'].map((curr) => (
+                    <button
+                      key={curr}
+                      type="button"
+                      onClick={() => {
+                        setCurrency(curr as 'EUR' | 'USD' | 'PLN');
+                        setBudget(currencyRanges[curr as keyof typeof currencyRanges].min);
+                      }}
+                      className={`px-3 py-1 text-sm rounded-md transition-colors ${
+                        currency === curr 
+                          ? 'bg-[#3257A5] text-white' 
+                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      }`}
+                    >
+                      {curr}
+                    </button>
+                  ))}
+                </div>
+                <input
+                  type="range"
+                  min={currencyRanges[currency].min}
+                  max={currencyRanges[currency].max}
+                  step={currency === 'PLN' ? 2000 : 1000}
+                  value={budget}
+                  onChange={(e) => setBudget(parseInt(e.target.value))}
+                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#3257A5]"
+                />
+                <div className="flex justify-between text-xs text-gray-500 mt-1">
+                  <span>{currencyRanges[currency].min.toLocaleString()}{currencySymbols[currency]}</span>
+                  <span className="font-bold text-[#1A1A1A]">{budget.toLocaleString()}{currencySymbols[currency]}</span>
+                  <span>{currencyRanges[currency].max.toLocaleString()}{currencySymbols[currency]}+</span>
+                </div>
               </div>
 
               <div>

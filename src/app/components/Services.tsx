@@ -43,7 +43,7 @@ export default function Services() {
     <section id="services" className="py-8 md:py-16 bg-[#F6F4F1]">
       <div className="w-full max-w-[1200px] mx-auto px-4 md:px-0">
         <h2 className="text-2xl md:text-[36px] font-extrabold text-center mb-6 md:mb-8 text-[#1A1A1A]">
-          What we can do for you boss
+          What can we do for you boss?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {services.map((service, index) => (
@@ -66,10 +66,7 @@ export default function Services() {
                   </h3>
                   <div className="hidden md:flex md:flex-wrap md:gap-[4px]">
                     {service.tags.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="px-2 py-1 text-[11px] font-normal bg-[#E9E3DD] text-[#9D958B] rounded-full border border-[#9D958B]"
-                      >
+                      <span key={idx} className="tag">
                         {tag}
                       </span>
                     ))}
@@ -78,7 +75,7 @@ export default function Services() {
               </div>
               <p className="text-[#4b5563] mb-4">{service.description}</p>
               <button 
-                onClick={() => alert("I'm pressed")} 
+                onClick={() => router.push('/contact')} 
                 className="btn-secondary self-end cursor-pointer"
               >
                 I NEED THIS! <ArrowRightIcon className="h-3 w-3" />

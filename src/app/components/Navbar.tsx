@@ -60,18 +60,13 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
 
           <ul className="hidden md:flex gap-6 items-center absolute left-1/2 transform -translate-x-1/2">
             <li>
-              <Link href="#projects" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5]">
+              <Link href="/projects" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5]">
                 PROJECTS
               </Link>
             </li>
             <li>
-              <Link href="#services" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5]">
+              <Link href="/#services" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5]">
                 SERVICES
-              </Link>
-            </li>
-            <li>
-              <Link href="#pricing" className="text-[12px] font-semibold text-[#F6F4F1] hover:text-[#3257A5]">
-                PRICING
               </Link>
             </li>
             <li>
@@ -110,25 +105,18 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
         >
           <nav className="py-16 flex flex-col items-center space-y-8">
             <Link 
-              href="#projects" 
+              href="/projects" 
               className="text-[16px] font-semibold text-[#F6F4F1]"
               onClick={() => setIsDrawerOpen(false)}
             >
               PROJECTS
             </Link>
             <Link 
-              href="#services" 
+              href="/#services" 
               className="text-[16px] font-semibold text-[#F6F4F1]"
               onClick={() => setIsDrawerOpen(false)}
             >
               SERVICES
-            </Link>
-            <Link 
-              href="#pricing" 
-              className="text-[16px] font-semibold text-[#F6F4F1]"
-              onClick={() => setIsDrawerOpen(false)}
-            >
-              PRICING
             </Link>
             <Link 
               href="/about" 
@@ -144,9 +132,13 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
             >
               CAREER
             </Link>
-            <button className="btn-primary mt-8">
+            <Link 
+              href="/contact" 
+              className="btn-primary mt-8"
+              onClick={() => setIsDrawerOpen(false)}
+            >
               CONTACT US
-            </button>
+            </Link>
           </nav>
         </div>
       </div>

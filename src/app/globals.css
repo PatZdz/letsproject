@@ -88,6 +88,16 @@ body {
   transform: translateX(4px);
 }
 
+.tag {
+  padding: 0.25rem 0.5rem;
+  font-size: 11px;
+  font-weight: 400;
+  background-color: #E9E3DD;
+  color: #7A7267;
+  border-radius: 9999px;
+  border: 1px solid #7A7267;
+}
+
 @media (max-width: 768px) {
   .hero-section {
     min-height: 70vh;
