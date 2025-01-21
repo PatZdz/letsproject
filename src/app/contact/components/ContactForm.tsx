@@ -320,7 +320,7 @@ export default function ContactForm() {
                 className={`btn-primary mt-4 w-full ${(buttonState === 'sending' || buttonState === 'success') ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
                 {buttonState === 'sending' && 'SENDING...'}
-                {buttonState === 'success' && 'SENT SUCCESSFULLY'}
+                {buttonState === 'success' && 'SENT SUCCESSFULLY 👍'}
                 {buttonState === 'default' && 'SEND'}
               </button>
               <p className="text-xs text-gray-600 mt-2">
