@@ -1,6 +1,11 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 
+type Props = {
+  params: { projectId: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
 interface Project {
   title: string;
   description: string;
@@ -42,11 +47,7 @@ const projectsData: Record<string, Project> = {
   }
 };
 
-export default async function ProjectPage({
-  params,
-}: {
-  params: { projectId: string }
-}) {
+export default async function ProjectPage({ params }: Props) {
   if (!params?.projectId) {
     notFound();
   }
