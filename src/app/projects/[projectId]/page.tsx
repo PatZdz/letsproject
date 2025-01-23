@@ -1,12 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 
-interface PageProps {
-  params: {
-    projectId: string;
-  };
-}
-
 interface Project {
   title: string;
   description: string;
@@ -48,7 +42,11 @@ const projectsData: Record<string, Project> = {
   }
 };
 
-export default async function ProjectPage({ params }: PageProps) {
+export default async function ProjectPage({
+  params,
+}: {
+  params: { projectId: string }
+}) {
   if (!params?.projectId) {
     notFound();
   }
