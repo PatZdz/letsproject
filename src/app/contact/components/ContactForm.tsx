@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
       "LetsProject has transformed our brand with a stunning new identity and a website that perfectly reflects our vision. Their attention to detail and creativity made the entire process a breeze.",
     author: "Daniel Semerjyan",
     position: "Co-Founder",
-    company: "FitWise",
+    company: "FitWise", 
     stars: 5,
   },
   {
@@ -59,8 +59,8 @@ export default function ContactForm() {
 
   const handleExpectationsChange = (value: string) => {
     if (buttonState === 'success') return;
-    setSelectedExpectations(prev => 
-      prev.includes(value) 
+    setSelectedExpectations(prev =>
+      prev.includes(value)
         ? prev.filter(item => item !== value)
         : [...prev, value]
     );
@@ -72,35 +72,35 @@ export default function ContactForm() {
     
     setButtonState('sending');
     const formData = new FormData(e.currentTarget);
-    const data = {
-      fullName: formData.get('fullName'),
-      company: formData.get('company'),
-      email: formData.get('email'),
-      expectations: JSON.stringify(selectedExpectations),
-      budget: budget,
-      currency: currency,
-      howWeCanHelp: formData.get('howWeCanHelp'),
-      howDidYouHear: formData.get('howDidYouHear'),
-      nda: formData.get('nda') ? 1 : 0,
-    };
+
+    const googleFormsURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfY96o87er0yj4HweiVZ5SShJlqho5HQA42ggWOSuixe2ySDw/formResponse';
+    
+    const params = new URLSearchParams({
+      'entry.1814990160': formData.get('fullName') as string,        // Name
+      'entry.733501683': formData.get('company') as string,          // Company
+      'entry.771848371': formData.get('email') as string,            // Email
+      'entry.2016454461': JSON.stringify(selectedExpectations),      // Expectations
+      'entry.614675999': budget.toString(),                          // Budget
+      'entry.1468628125': currency,                                  // Currency
+      'entry.1887043213': formData.get('howWeCanHelp') as string,   // How can we help
+      'entry.469706325': formData.get('howDidYouHear') as string,   // How did you hear
+      'entry.615425382': formData.get('nda') ? '1' : '0'            // NDA
+    });
+    
+    
 
     try {
-      const response = await fetch('/api/contact', {
+      await fetch(`${googleFormsURL}?${params.toString()}`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+        mode: 'no-cors'
       });
-
-      if (response.ok) {
-        setButtonState('success');
-        formRef.current?.reset();
-        setSelectedExpectations([]);
-        setBudget(currencyRanges[currency].min);
-      }
+      
+      setButtonState('success');
+      formRef.current?.reset();
+      setSelectedExpectations([]);
+      setBudget(currencyRanges[currency].min);
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error:', error);
       setButtonState('default');
     }
   };
@@ -228,8 +228,8 @@ export default function ContactForm() {
                         setBudget(currencyRanges[curr as keyof typeof currencyRanges].min);
                       }}
                       className={`px-3 py-1 text-sm rounded-md transition-colors ${
-                        currency === curr 
-                          ? 'bg-[#3257A5] text-white' 
+                        currency === curr
+                          ? 'bg-[#3257A5] text-white'
                           : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       } ${buttonState === 'success' ? 'opacity-50 cursor-not-allowed' : ''}`}
                       disabled={buttonState === 'success'}
@@ -334,3 +334,8 @@ export default function ContactForm() {
     </section>
   );
 }
+
+
+
+
+

@@ -12,7 +12,6 @@ export default function FitwiseProject() {
     <div className="w-full max-w-[1200px] mx-auto px-4 md:px-0 my-4">
       <div className="bg-[#F0EEEC] rounded-lg overflow-hidden">
         <div className="flex flex-col-reverse md:flex-row">
-          {/* Left Column - Content */}
           <div className="md:w-2/5 flex items-center">
             <div className="p-8">
               <Image
@@ -32,7 +31,7 @@ export default function FitwiseProject() {
               </p>
               <div className="flex justify-center md:justify-start mb-4 md:mb-0">
                 <button
-                  onClick={() => router.push("/contact")}
+                  onClick={() => router.push("/projects/fitwise")}
                   className="btn-secondary flex items-center whitespace-nowrap"
                 >
                   Learn more
@@ -42,7 +41,6 @@ export default function FitwiseProject() {
             </div>
           </div>
 
-          {/* Right Column - Image */}
           <div className="md:w-3/5 aspect-[4/3]">
             <div className="relative w-full h-full">
               <Image
