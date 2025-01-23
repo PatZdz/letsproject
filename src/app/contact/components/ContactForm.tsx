@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
       "LetsProject has transformed our brand with a stunning new identity and a website that perfectly reflects our vision. Their attention to detail and creativity made the entire process a breeze.",
     author: "Daniel Semerjyan",
     position: "Co-Founder",
-    company: "FitWise", 
+    company: "FitWise",
     stars: 5,
   },
   {
@@ -69,12 +69,12 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (buttonState === 'success') return;
-    
+
     setButtonState('sending');
     const formData = new FormData(e.currentTarget);
 
     const googleFormsURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfY96o87er0yj4HweiVZ5SShJlqho5HQA42ggWOSuixe2ySDw/formResponse';
-    
+
     const params = new URLSearchParams({
       'entry.1814990160': formData.get('fullName') as string,        // Name
       'entry.733501683': formData.get('company') as string,          // Company
@@ -86,15 +86,15 @@ export default function ContactForm() {
       'entry.469706325': formData.get('howDidYouHear') as string,   // How did you hear
       'entry.615425382': formData.get('nda') ? '1' : '0'            // NDA
     });
-    
-    
+
+
 
     try {
       await fetch(`${googleFormsURL}?${params.toString()}`, {
         method: 'POST',
         mode: 'no-cors'
       });
-      
+
       setButtonState('success');
       formRef.current?.reset();
       setSelectedExpectations([]);
@@ -227,11 +227,10 @@ export default function ContactForm() {
                         setCurrency(curr as 'EUR' | 'USD' | 'PLN');
                         setBudget(currencyRanges[curr as keyof typeof currencyRanges].min);
                       }}
-                      className={`px-3 py-1 text-sm rounded-md transition-colors ${
-                        currency === curr
-                          ? 'bg-[#3257A5] text-white'
-                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                      } ${buttonState === 'success' ? 'opacity-50 cursor-not-allowed' : ''}`}
+                      className={`px-3 py-1 text-sm rounded-md transition-colors ${currency === curr
+                        ? 'bg-[#3257A5] text-white'
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        } ${buttonState === 'success' ? 'opacity-50 cursor-not-allowed' : ''}`}
                       disabled={buttonState === 'success'}
                     >
                       {curr}
@@ -248,9 +247,8 @@ export default function ContactForm() {
                     if (buttonState === 'success') return;
                     setBudget(parseInt(e.target.value));
                   }}
-                  className={`w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#3257A5] ${
-                    buttonState === 'success' ? 'opacity-50' : ''
-                  }`}
+                  className={`w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#3257A5] ${buttonState === 'success' ? 'opacity-50' : ''
+                    }`}
                   disabled={buttonState === 'success'}
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
@@ -317,12 +315,16 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={buttonState === 'sending' || buttonState === 'success'}
-                className={`btn-primary mt-4 w-full ${(buttonState === 'sending' || buttonState === 'success') ? 'opacity-70 cursor-not-allowed' : ''}`}
+                className={`btn-primary mt-4 w-full ${buttonState === 'success' ? '!bg-green-600' : ''
+                  } ${(buttonState === 'sending' || buttonState === 'success') ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
                 {buttonState === 'sending' && 'SENDING...'}
                 {buttonState === 'success' && 'SENT SUCCESSFULLY 👍'}
                 {buttonState === 'default' && 'SEND'}
               </button>
+
+
+
               <p className="text-xs text-gray-600 mt-2">
                 By clicking on the button, you consent to the processing of
                 personal data and agree to the site&apos;s Privacy Policy.
@@ -334,8 +336,3 @@ export default function ContactForm() {
     </section>
   );
 }
-
-
-
-
-
