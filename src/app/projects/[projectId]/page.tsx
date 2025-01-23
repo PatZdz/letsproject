@@ -5,7 +5,6 @@ interface PageProps {
   params: {
     projectId: string;
   };
-  searchParams: Record<string, string | string[] | undefined>;
 }
 
 interface Project {
@@ -49,7 +48,7 @@ const projectsData: Record<string, Project> = {
   }
 };
 
-export default function ProjectPage({ params }: PageProps) {
+export default async function ProjectPage({ params }: PageProps) {
   if (!params?.projectId) {
     notFound();
   }
