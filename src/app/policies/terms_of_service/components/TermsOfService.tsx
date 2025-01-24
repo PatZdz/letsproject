@@ -6,7 +6,7 @@ export default function TermsOfService() {
         
         <div className="prose prose-lg max-w-none">
           <p className="mb-8">
-            Welcome to LetsProject.co! These Terms of Service ("Terms") govern your use of our website and the services 
+            Welcome to LetsProject.co! These Terms of Service (&quot;Terms&quot;) govern your use of our website and the services 
             provided by our software agency, including website design, development, and mobile app creation. By accessing 
             or using our website and services, you agree to comply with these Terms. If you do not agree to these Terms, 
             please do not use our website or services.
@@ -81,7 +81,7 @@ export default function TermsOfService() {
             <p>Any pre-existing materials, libraries, or tools used by LetsProject.co in project development remain the intellectual property of LetsProject.co.</p>
   
             <h3 className="text-xl font-medium mt-4 mb-2">4.3. Trademarks</h3>
-            <p>The name "LetsProject.co" and any associated logos are trademarks of LetsProject.co. You may not use these trademarks without prior written permission.</p>
+            <p>The name &quot;LetsProject.co&quot; and any associated logos are trademarks of LetsProject.co. You may not use these trademarks without prior written permission.</p>
           </section>
   
           <section className="mb-8">
@@ -153,5 +153,4 @@ export default function TermsOfService() {
         </div>
       </div>
     )
-  }
-  
+}

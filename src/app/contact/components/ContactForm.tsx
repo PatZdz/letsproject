@@ -22,7 +22,7 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Thanks to LetsProject, our new website is not only visually stunning but also incredibly fast and responsive. Our customers love the seamless experience, and we&apos;ve seen a noticeable increase in engagement.",
+      "Thanks to LetsProject, our new website is not only visually stunning but also incredibly fast and responsive. Our customers love the seamless experience, and we've seen a noticeable increase in engagement.",
     author: "Marcin Zaremski",
     position: "Founder",
     company: "GPX Overlay",
@@ -30,13 +30,14 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "The mobile app developed by LetsProject exceeded all our expectations. It&apos;s user-friendly, beautifully designed, and runs flawlessly. We&apos;ve received amazing feedback from our users!",
+      "The mobile app developed by LetsProject exceeded all our expectations. It's user-friendly, beautifully designed, and runs flawlessly. We've received amazing feedback from our users!",
     author: "Piotr Kluk",
     position: "Co-Founder",
     company: "Hido",
     stars: 5,
   },
 ];
+
 
 export default function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -191,7 +192,7 @@ export default function ContactForm() {
                   What do you expect from us?
                 </label>
                 <div className="flex flex-wrap gap-2">
-                  {["Website", "Mobile App", "Branding", "Ecommerce", "UXUI Audit"].map((option, index) => (
+                  {["Website", "Mobile App", "Branding", "Ecommerce", "UXUI Audit", "Other"].map((option, index) => (
                     <label
                       key={index}
                       className={`cursor-pointer ${buttonState === 'success' ? 'pointer-events-none opacity-50' : ''}`}
@@ -212,6 +213,7 @@ export default function ContactForm() {
                   ))}
                 </div>
               </div>
+
 
               <div>
                 <label className="text-sm font-semibold block mb-3">

@@ -28,9 +28,9 @@ export default function CookiesPolicy() {
             <p>We use Simply Analytics to collect anonymized data about how users interact with our website. 
             This helps us improve website performance and design by understanding:</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Which pages are visited most frequently.</li>
-              <li>How long users stay on our website.</li>
-              <li>The geographic location of visitors (e.g., country or city).</li>
+              <li>Which pages are visited most frequently</li>
+              <li>How long users stay on our website</li>
+              <li>The geographic location of visitors (country or city)</li>
             </ul>
             <p>These cookies do not collect personal information and are used for aggregate analytics purposes.</p>
           </section>
@@ -41,22 +41,22 @@ export default function CookiesPolicy() {
   
             <h3 className="text-xl font-medium mt-4 mb-2">Session Cookies</h3>
             <ul className="list-disc pl-6 mb-4">
-              <li>Temporary cookies that expire once you close your browser.</li>
+              <li>Temporary cookies that expire once you close your browser</li>
             </ul>
   
             <h3 className="text-xl font-medium mt-4 mb-2">Persistent Cookies</h3>
             <ul className="list-disc pl-6 mb-4">
-              <li>Cookies that remain on your device for a set period or until you delete them.</li>
+              <li>Cookies that remain on your device for a set period or until you delete them</li>
             </ul>
   
             <h3 className="text-xl font-medium mt-4 mb-2">First-Party Cookies</h3>
             <ul className="list-disc pl-6 mb-4">
-              <li>Cookies set by LetsProject.co to improve your browsing experience.</li>
+              <li>Cookies set by LetsProject.co to improve your browsing experience</li>
             </ul>
   
             <h3 className="text-xl font-medium mt-4 mb-2">Third-Party Cookies</h3>
             <ul className="list-disc pl-6 mb-4">
-              <li>Cookies from third-party services, such as Simply Analytics, to analyze website traffic and performance.</li>
+              <li>Cookies from third-party services, such as Simply Analytics, to analyze website traffic and performance</li>
             </ul>
           </section>
   
@@ -69,26 +69,26 @@ export default function CookiesPolicy() {
             <ul className="list-disc pl-6 mb-4">
               <li>Google Chrome:
                 <ul className="pl-6 mt-2">
-                  <li>Go to Settings &gt; Privacy and Security &gt; Cookies and other site data.</li>
+                  <li>Go to Settings &gt; Privacy and Security &gt; Cookies and other site data</li>
                 </ul>
               </li>
               <li>Mozilla Firefox:
                 <ul className="pl-6 mt-2">
-                  <li>Go to Options &gt; Privacy & Security &gt; Cookies and Site Data.</li>
+                  <li>Go to Options &gt; Privacy &amp; Security &gt; Cookies and Site Data</li>
                 </ul>
               </li>
               <li>Safari:
                 <ul className="pl-6 mt-2">
-                  <li>Go to Preferences &gt; Privacy &gt; Manage Website Data.</li>
+                  <li>Go to Preferences &gt; Privacy &gt; Manage Website Data</li>
                 </ul>
               </li>
               <li>Microsoft Edge:
                 <ul className="pl-6 mt-2">
-                  <li>Go to Settings &gt; Cookies and Site Permissions.</li>
+                  <li>Go to Settings &gt; Cookies and Site Permissions</li>
                 </ul>
               </li>
             </ul>
-            <p>For more detailed instructions, visit your browser's help documentation.</p>
+            <p>For more detailed instructions, visit your browser&apos;s help documentation.</p>
           </section>
   
           <section className="mb-8">
@@ -123,4 +123,3 @@ export default function CookiesPolicy() {
       </div>
     )
   }
-  
