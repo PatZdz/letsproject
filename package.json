@@ -3,20 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "generate": "drizzle-kit generate:sqlite",
-    "migrate": "drizzle-kit push:sqlite"
+    "lint": "next lint"
   },
   "dependencies": {
     "@fontsource/inter": "^5.1.1",
     "@heroicons/react": "^2.2.0",
-    "@libsql/client": "^0.14.0",
-    "@xata.io/client": "^0.0.0-next.va121e4207b94bfe0a3c025fc00b247b923880930",
     "dotenv": "^16.4.7",
-    "drizzle-orm": "^0.38.4",
     "framer-motion": "^11.15.0",
     "next": "15.1.0",
     "pg": "^8.13.1",
@@ -30,7 +25,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.20",
-    "drizzle-kit": "^0.30.2",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
     "postcss": "^8.4.49",

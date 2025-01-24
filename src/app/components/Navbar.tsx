@@ -48,7 +48,7 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
           <div className="flex items-center">
             <Link href="/">
               <Image
-                src="vectors//letsproject_logo_beige.svg"
+                src="/vectors//letsproject_logo_beige.svg"
                 alt="LetsProject Logo"
                 width={108}
                 height={36}
