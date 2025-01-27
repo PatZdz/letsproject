@@ -1,0 +1,116 @@
+{
+    "slug": "fitwise",
+    "header": {
+      "title": "How we created a brand and SaaS platform to help manage sports facilities.",
+      "subtitle": "FitWise",
+      "coverImage": "/images/projects/fitwise/fitwise_header_1.jpg"
+    },
+    "overview": {
+      "description": "FitWise is a modern web application designed specifically for owners of sports facilities and personal trainers. With its advanced features, FitWise enables efficient management of sports facilities, class schedules, user registration, and collaboration with trainers. This comprehensive tool simplifies work organization, saves time, and supports business growth, all while offering an intuitive interface and ease of use. Choose FitWise to streamline the operations of your sports facility and focus on what matters most building relationships with clients and fostering their passion for physical activity.",
+      "duration": "6 months",
+      "role": "Lead Developer",
+      "client": "FitWise Inc.",
+      "scope": [
+        "Web App",
+        "Website",
+        "Admin Dashboard",
+        "API Development",
+        "Database Design",
+        "Cloud Infrastructure",
+        "Branding"
+      ]
+    },
+    "challenges": [
+      {
+        "title": "Complex User Requirements",
+        "description": "Developing a platform that caters to both beginners and advanced fitness enthusiasts while maintaining simplicity and usability."
+      },
+      {
+        "title": "Difficult To Organise",
+        "description": "When a business is scaled, there is the problem of chaos in booking a calendar. In the fitness industry, you always need to have a quick overview of the day's activities."
+      },
+      {
+        "title": "List of class participants",
+        "description": "Often personal trainers get lost in the list of their subjects they train with at the gym. It is necessary to create an easing of this problem."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "User-Centric Design",
+        "description": "We have implemented an intuitive interface that gives you a quick overview of what interests you most.",
+        "image": "/images/projects/fitwise/fitwise_solution_1.jpg"
+      },
+      {
+        "title": "Keep your finger on the pulse",
+        "description": "We've added a quick preview to the calendar so nothing ever surprises you.",
+        "image": "/images/projects/fitwise/fitwise_solution_2.jpg"
+      },
+      {
+        "title": "Checklist with participants",
+        "description": "Quickly check the list of people attending a class. Mark who came and who didn't. A small thing that helps so much.",
+        "image": "/images/projects/fitwise/fitwise_solution_3.jpg"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "/images/projects/fitwise/fitwise_gallery_1.jpg",
+        "alt": "Dashboard View",
+        "caption": "Main dashboard view for sports facility owners"
+      },
+      {
+        "src": "/images/projects/fitwise/fitwise_gallery_2.jpg",
+        "alt": "Workout Tracking",
+        "caption": "FitWise Branding"
+      },
+      {
+        "src": "/images/projects/fitwise/fitwise_gallery_3.jpg",
+        "alt": "Nutrition Planning",
+        "caption": "Advanced Calendar"
+      }
+    ],
+    "technologies": [
+      {
+        "category": "Frontend Development",
+        "items": ["Flutter", "TypeScript", "Next.js"]
+      },
+      {
+        "category": "Backend Development", 
+        "items": ["Node.js", "FireBase"]
+      },
+      {
+        "category": "Cloud & DevOps",
+        "items": ["GCP"]
+      }
+    ],
+    "results": {
+      "metrics": [
+        {
+          "value": "10+",
+          "label": "Active Gyms",
+          "description": "More sports facilities are joining"
+        },
+        {
+          "value": "92%",
+          "label": "User Satisfaction",
+          "description": "Based on in-app feedback"
+        },
+        {
+          "value": "200+",
+          "label": "Customers in the database",
+          "description": "The gyms are convincing themselves"
+        },
+        {
+          "value": "100%",
+          "label": "Trainers recommend",
+          "description": "Personal trainers find our app helpful"
+        }
+      ],
+      "achievements": [
+        "Successfully launched in 10 gyms",
+        "Highly recommended by gyms",
+        "Thousands of zloty savings, for those who use",
+        "Achieved MPV in just 2 months"
+      ]
+    }
+  }
+  

@@ -39,11 +39,11 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 bg-transparent mt-4 px-4 md:px-0 ${
+      className={`fixed w-full top-0 z-[40] bg-transparent mt-4 px-4 md:px-0 ${
         showNavbar ? "translate-y-0" : "translate-y-[-150%]"
       } transition-transform duration-300`}
     >
-      <div className="w-full max-w-[1200px] mx-auto px-4 md:px-[22px] py-4 bg-[#1D1E22] shadow-md rounded-lg relative z-20">
+      <div className="w-full max-w-[1200px] mx-auto px-4 md:px-[22px] py-4 bg-[#1D1E22] shadow-md rounded-lg relative z-[41]">
         <nav className="flex items-center relative">
           <div className="flex items-center">
             <Link href="/">
@@ -97,7 +97,7 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
         </nav>
       </div>
 
-      <div className={`fixed left-0 right-0 px-4 z-10 ${!isDrawerOpen ? 'pointer-events-none' : ''}`}>
+      <div className={`fixed left-0 right-0 px-4 z-[39] ${!isDrawerOpen ? 'pointer-events-none' : ''}`}>
         <div
           className={`w-full max-w-[1200px] mx-auto bg-[#1D1E22] shadow-md rounded-lg mt-2 transition-all duration-300 origin-top ${
             isDrawerOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0'

@@ -27,7 +27,11 @@ export default function FitwiseProject() {
                 for sports facilities and personal trainers.
               </p>
               <p className="text-[#4b5563] mb-8">
-                FitWise combines an intuitive interface with advanced features to deliver a tool that supports the growth and efficiency of managing any sports facility - from gyms to dance schools to fitness clubs. It is ideal for modern managers who want to focus on growing their business rather than on formalities.
+                FitWise combines an intuitive interface with advanced features
+                to deliver a tool that supports the growth and efficiency of
+                managing any sports facility - from gyms to dance schools to
+                fitness clubs. It is ideal for modern managers who want to focus
+                on growing their business rather than on formalities.
               </p>
               <div className="flex justify-center md:justify-start mb-4 md:mb-0">
                 <button

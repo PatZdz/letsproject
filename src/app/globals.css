@@ -5,8 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #3257A5;
-  --primary-hover: #2A4A8E;
+  --background-secondary: #F0EEEC;
 }
 
 html, 
