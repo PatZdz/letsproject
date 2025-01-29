@@ -26,6 +26,11 @@ export const Info = () => (
             <h3 className="text-lg md:text-xl font-medium text-gray-900 mb-1 md:mb-2">Oferta specjalna</h3>
             <p className="text-base md:text-lg text-gray-600">W ramach oferty specjalnej pakiet zlecenia jest ponad 5000zł tańszy! Logotypy będą w cenie. Umowa retainerska będzie 2 razy dłuższa!</p>
           </div>
+
+          <div className="border-l-3 border-blue-500 pl-3 md:pl-6 py-2">
+            <h3 className="text-lg md:text-xl font-medium text-gray-900 mb-1 md:mb-2">Darmowy hosting</h3>
+            <p className="text-base md:text-lg text-gray-600">W ramach współpracy użyjemy darmowego hostingu Vercel. Przez długi czas on wystarczy i nie trzeba będzie płacić. Ty tylko musisz opłacać domenę.</p>
+          </div>
         </div>
       </div>
     </div>
