@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 interface TimerProps {
   timeLeft: {
     days: number;

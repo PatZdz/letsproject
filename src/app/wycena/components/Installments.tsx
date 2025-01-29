@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 export const Installments = () => (
   <section className="mb-16">
     <div className="max-w-3xl mx-auto px-2 md:px-4">
@@ -28,9 +26,9 @@ export const Installments = () => (
           <div className="border-l-3 border-blue-500 pl-3 md:pl-6 py-2">
             <h3 className="text-lg md:text-xl font-medium text-gray-900 mb-1 md:mb-2">4 raty</h3>
             <p className="text-base md:text-lg text-gray-600 whitespace-pre-line">
-              [4449,75zł] - płatne z góry,
+              [4499,75zł] - płatne z góry,
               <br />
-              [4449,75zł], [4449,75zł], [4449,75zł] - płatne po zleceniu.
+              [4499,75zł], [4499,75zł], [4499,75zł] - płatne po zleceniu.
             </p>
           </div>
         </div>

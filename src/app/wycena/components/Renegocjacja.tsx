@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 export const Renegocjacja = () => (
   <section className="text-center mb-32 mt-32">
     <h2 className="text-2xl md:text-4xl font-bold mb-6">

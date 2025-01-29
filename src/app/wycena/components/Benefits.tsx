@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 export const Benefits = () => (
   <section className="mb-16">
     <div className="max-w-3xl mx-auto px-2 md:px-4">

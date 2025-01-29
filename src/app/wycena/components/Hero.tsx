@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 export const Hero = () => (
   <section className="hero-content mb-12 mt-16 md:mt-32">
     <h1 className="text-3xl md:text-6xl font-bold text-gray-900 mb-4 md:mb-6">
