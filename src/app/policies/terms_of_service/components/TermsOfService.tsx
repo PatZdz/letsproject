@@ -82,7 +82,7 @@ export default function TermsOfService() {
           <p>Wszelkie istniejące wcześniej materiały, biblioteki lub narzędzia używane przez LetsProject.co w rozwoju projektu pozostają własnością intelektualną LetsProject.co.</p>
 
           <h3 className="text-xl font-medium mt-4 mb-2">4.3. Znaki Towarowe</h3>
-          <p>Nazwa "LetsProject.co" i wszelkie powiązane z nią logo są znakami towarowymi LetsProject.co. Nie możesz używać tych znaków towarowych bez uprzedniej pisemnej zgody.</p>
+          <p>Nazwa &quot;LetsProject.co&quot; i wszelkie powiązane z nią logo są znakami towarowymi LetsProject.co. Nie możesz używać tych znaków towarowych bez uprzedniej pisemnej zgody.</p>
         </section>
 
         <section className="mb-8">
