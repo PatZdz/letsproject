@@ -36,10 +36,10 @@ export default function Hero() {
             UMÓW SIĘ NA SPOTKANIE
           </button>
           <button
-            onClick={() => router.push('/projects')}
+            onClick={() => router.push('/projects/fitwise')}
             className="btn-secondary cursor-pointer"
           >
-            Sprawdź realizacje <ArrowRightIcon className="h-3 w-3" />
+            Przykładowa realizacja <ArrowRightIcon className="h-3 w-3" />
           </button>
         </div>
       </div>
