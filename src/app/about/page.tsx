@@ -4,9 +4,6 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import AboutUs from "./components/About";
 import Values from "./components/Values";
-import Experience from "./components/Experience";
-import Vision from "./components/Vision";
-import Mission from "./components/Mission";
 import Footer from "../components/Footer";
 
 export default function About() {
@@ -20,9 +17,6 @@ export default function About() {
       />
       <AboutUs />
       <Values />
-      <Experience />
-      <Vision />
-      <Mission />
       <Footer />
     </main>
   );

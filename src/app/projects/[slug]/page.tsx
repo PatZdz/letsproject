@@ -30,7 +30,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       <Navbar isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
       <main className="min-h-screen w-full">
         <HeaderProject {...projectData.header} />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
           <OverviewProject {...projectData.overview} />
           <ChallengesProject challenges={projectData.challenges} />

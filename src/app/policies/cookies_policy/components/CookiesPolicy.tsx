@@ -1,125 +1,128 @@
 export default function CookiesPolicy() {
-    return (
-      <div className="max-w-4xl mx-auto px-4 py-12 pt-40">
-        <h1 className="text-3xl font-bold mb-8">Cookies Policy for LetsProject.co</h1>
-        <p className="text-gray-600 mb-8">Effective Date: 24.01.2025</p>
-        
-        <div className="prose prose-lg max-w-none">
-          <p className="mb-8">
-            At LetsProject.co, we use cookies to enhance your browsing experience, analyze website performance, 
-            and provide our services. This Cookies Policy explains what cookies are, how we use them, and your 
-            choices regarding their use.
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12 pt-40">
+      <h1 className="text-3xl font-bold mb-8">Polityka Cookies dla LetsProject.co</h1>
+      <p className="text-gray-600 mb-8">Data wejścia w życie: 24.01.2025</p>
+
+      <div className="prose prose-lg max-w-none">
+        <p className="mb-8">
+          W LetsProject.co używamy plików cookie, aby poprawić jakość przeglądania, analizować wydajność strony
+          internetowej i świadczyć nasze usługi. Ta Polityka Cookies wyjaśnia, czym są pliki cookie, jak je wykorzystujemy
+          oraz jakie masz możliwości w zakresie ich używania.
+        </p>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">1. Czym są pliki cookie?</h2>
+          <p>Pliki cookie to małe pliki tekstowe przechowywane na Twoim urządzeniu (komputerze, smartfonie lub tablecie)
+            podczas odwiedzania strony internetowej. Pliki cookie pomagają stronom internetowym działać prawidłowo, poprawiają
+            doświadczenie użytkownika i dostarczają danych analitycznych.</p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">2. Jak wykorzystujemy pliki cookie</h2>
+
+          <h3 className="text-xl font-medium mt-4 mb-2">a) Niezbędne pliki cookie</h3>
+          <p>Te pliki cookie są niezbędne do funkcjonowania naszej strony internetowej i umożliwiają korzystanie z
+            podstawowych funkcji, takich jak nawigacja i dostęp do bezpiecznych obszarów. Bez tych plików cookie strona
+            może nie działać prawidłowo.</p>
+
+          <h3 className="text-xl font-medium mt-4 mb-2">b) Analityczne pliki cookie</h3>
+          <p>Używamy Simply Analytics do zbierania anonimowych danych o tym, jak użytkownicy korzystają z naszej strony.
+            Pomaga nam to poprawić wydajność i projekt strony poprzez zrozumienie:</p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Które strony są najczęściej odwiedzane</li>
+            <li>Jak długo użytkownicy pozostają na naszej stronie</li>
+            <li>Lokalizacji geograficznej odwiedzających (kraj lub miasto)</li>
+          </ul>
+          <p>Te pliki cookie nie zbierają danych osobowych i są używane wyłącznie do celów analitycznych.</p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">3. Rodzaje używanych przez nas plików cookie</h2>
+          <p>Pliki cookie na naszej stronie są klasyfikowane w następujące kategorie:</p>
+
+          <h3 className="text-xl font-medium mt-4 mb-2">Sesyjne pliki cookie</h3>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Tymczasowe pliki cookie, które wygasają po zamknięciu przeglądarki</li>
+          </ul>
+
+          <h3 className="text-xl font-medium mt-4 mb-2">Trwałe pliki cookie</h3>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Pliki cookie, które pozostają na Twoim urządzeniu przez określony czas lub do momentu ich usunięcia</li>
+          </ul>
+
+          <h3 className="text-xl font-medium mt-4 mb-2">Pliki cookie pierwszej strony</h3>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Pliki cookie ustawiane przez LetsProject.co w celu poprawy jakości przeglądania</li>
+          </ul>
+
+          <h3 className="text-xl font-medium mt-4 mb-2">Pliki cookie stron trzecich</h3>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Pliki cookie od usług stron trzecich, takich jak Simply Analytics, służące do analizy ruchu i wydajności strony</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">4. Twoje wybory dotyczące plików cookie</h2>
+          <p>Możesz kontrolować lub wyłączyć pliki cookie za pomocą ustawień przeglądarki. Pamiętaj, że wyłączenie
+            plików cookie może wpłynąć na funkcjonalność naszej strony.</p>
+
+          <h3 className="text-xl font-medium mt-4 mb-2">Zarządzanie plikami cookie w przeglądarce:</h3>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Google Chrome:
+              <ul className="pl-6 mt-2">
+                <li>Przejdź do Ustawienia &gt; Prywatność i bezpieczeństwo &gt; Pliki cookie i inne dane witryn</li>
+              </ul>
+            </li>
+            <li>Mozilla Firefox:
+              <ul className="pl-6 mt-2">
+                <li>Przejdź do Opcje &gt; Prywatność i bezpieczeństwo &gt; Pliki cookie i dane witryn</li>
+              </ul>
+            </li>
+            <li>Safari:
+              <ul className="pl-6 mt-2">
+                <li>Przejdź do Preferencje &gt; Prywatność &gt; Zarządzaj danymi witryn</li>
+              </ul>
+            </li>
+            <li>Microsoft Edge:
+              <ul className="pl-6 mt-2">
+                <li>Przejdź do Ustawienia &gt; Pliki cookie i uprawnienia witryn</li>
+              </ul>
+            </li>
+          </ul>
+          <p>Aby uzyskać bardziej szczegółowe instrukcje, odwiedź dokumentację pomocy swojej przeglądarki.</p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">5. Pliki cookie stron trzecich</h2>
+          <p>Nasza strona korzysta z Simply Analytics do analizy ruchu na stronie. Simply Analytics może ustawiać pliki cookie
+            na Twoim urządzeniu w celu zbierania anonimowych danych o Twojej wizycie. Możesz zapoznać się z ich polityką
+            prywatności i plików cookie tutaj: <a href="https://dashboard.simpleanalytics.com/privacy-policy" className="text-blue-600 hover:underline">
+              https://dashboard.simpleanalytics.com/privacy-policy</a></p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">6. Aktualizacje niniejszej Polityki Cookies</h2>
+          <p>Możemy aktualizować niniejszą Politykę Cookies od czasu do czasu, aby odzwierciedlić zmiany w naszym
+            wykorzystaniu plików cookie lub z innych powodów operacyjnych, prawnych lub regulacyjnych. Aktualizacje
+            będą publikowane na tej stronie wraz z datą wejścia w życie.</p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">7. Kontakt</h2>
+          <p>Jeśli masz jakiekolwiek pytania lub wątpliwości dotyczące niniejszej Polityki Cookies, skontaktuj się z nami:</p>
+          <p className="mt-2">
+            Email: <a href="mailto:letsproject.hello@gmail.com" className="text-blue-600 hover:underline">
+              letsproject.hello@gmail.com
+            </a>
           </p>
-  
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">1. What Are Cookies?</h2>
-            <p>Cookies are small text files stored on your device (computer, smartphone, or tablet) when you visit 
-            a website. Cookies help websites function properly, improve user experience, and provide analytics data.</p>
-          </section>
-  
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">2. How We Use Cookies</h2>
-            
-            <h3 className="text-xl font-medium mt-4 mb-2">a) Necessary Cookies</h3>
-            <p>These cookies are essential for the functioning of our website and enable core features, such as 
-            navigation and access to secure areas. Without these cookies, the website may not work properly.</p>
-  
-            <h3 className="text-xl font-medium mt-4 mb-2">b) Analytics Cookies</h3>
-            <p>We use Simply Analytics to collect anonymized data about how users interact with our website. 
-            This helps us improve website performance and design by understanding:</p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Which pages are visited most frequently</li>
-              <li>How long users stay on our website</li>
-              <li>The geographic location of visitors (country or city)</li>
-            </ul>
-            <p>These cookies do not collect personal information and are used for aggregate analytics purposes.</p>
-          </section>
-  
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">3. Types of Cookies We Use</h2>
-            <p>The cookies on our website are classified into the following categories:</p>
-  
-            <h3 className="text-xl font-medium mt-4 mb-2">Session Cookies</h3>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Temporary cookies that expire once you close your browser</li>
-            </ul>
-  
-            <h3 className="text-xl font-medium mt-4 mb-2">Persistent Cookies</h3>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Cookies that remain on your device for a set period or until you delete them</li>
-            </ul>
-  
-            <h3 className="text-xl font-medium mt-4 mb-2">First-Party Cookies</h3>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Cookies set by LetsProject.co to improve your browsing experience</li>
-            </ul>
-  
-            <h3 className="text-xl font-medium mt-4 mb-2">Third-Party Cookies</h3>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Cookies from third-party services, such as Simply Analytics, to analyze website traffic and performance</li>
-            </ul>
-          </section>
-  
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">4. Your Choices Regarding Cookies</h2>
-            <p>You can control or disable cookies through your browser settings. Note that disabling cookies may 
-            impact the functionality of our website.</p>
-  
-            <h3 className="text-xl font-medium mt-4 mb-2">Managing Cookies in Your Browser:</h3>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Google Chrome:
-                <ul className="pl-6 mt-2">
-                  <li>Go to Settings &gt; Privacy and Security &gt; Cookies and other site data</li>
-                </ul>
-              </li>
-              <li>Mozilla Firefox:
-                <ul className="pl-6 mt-2">
-                  <li>Go to Options &gt; Privacy &amp; Security &gt; Cookies and Site Data</li>
-                </ul>
-              </li>
-              <li>Safari:
-                <ul className="pl-6 mt-2">
-                  <li>Go to Preferences &gt; Privacy &gt; Manage Website Data</li>
-                </ul>
-              </li>
-              <li>Microsoft Edge:
-                <ul className="pl-6 mt-2">
-                  <li>Go to Settings &gt; Cookies and Site Permissions</li>
-                </ul>
-              </li>
-            </ul>
-            <p>For more detailed instructions, visit your browser&apos;s help documentation.</p>
-          </section>
-  
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">5. Third-Party Cookies</h2>
-            <p>Our website uses Simply Analytics for website traffic analysis. Simply Analytics may set cookies on 
-            your device to collect anonymized data about your visit. You can review their privacy and cookies 
-            policy here: <a href="https://dashboard.simpleanalytics.com/privacy-policy" className="text-blue-600 hover:underline">
-            https://dashboard.simpleanalytics.com/privacy-policy</a></p>
-          </section>
-  
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">6. Updates to This Cookies Policy</h2>
-            <p>We may update this Cookies Policy from time to time to reflect changes in our use of cookies or for 
-            other operational, legal, or regulatory reasons. Updates will be posted on this page with the effective date.</p>
-          </section>
-  
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">7. Contact Us</h2>
-            <p>If you have any questions or concerns about this Cookies Policy, please contact us at:</p>
-            <p className="mt-2">
-              Email: <a href="mailto:letsproject.hello@gmail.com" className="text-blue-600 hover:underline">
-                letsproject.hello@gmail.com
-              </a>
-            </p>
-          </section>
-  
-          <p className="mt-8 text-gray-600">
-            This Cookies Policy helps ensure transparency in how we use cookies and protect your online privacy. 
-            Thank you for visiting LetsProject.co!
-          </p>
-        </div>
+        </section>
+
+        <p className="mt-8 text-gray-600">
+          Niniejsza Polityka Cookies pomaga zapewnić przejrzystość w zakresie wykorzystania plików cookie i ochrony
+          Twojej prywatności online. Dziękujemy za odwiedzenie LetsProject.co!
+        </p>
       </div>
-    )
-  }
+    </div>
+  )
+}

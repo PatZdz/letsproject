@@ -5,23 +5,23 @@ import React from "react";
 export default function Values() {
   const values = [
     {
-      title: "Innovation",
-      description: "We embrace new technologies and methodologies to deliver cutting-edge solutions.",
+      title: "Innowacja",
+      description: "Wykorzystujemy nowe technologie i metodologie, aby dostarczać nowoczesne rozwiązania.",
       emoji: "💡"
     },
     {
-      title: "Transparency",
-      description: "Clear communication and honest feedback are the foundation of our relationships.",
+      title: "Transparentność",
+      description: "Jasna komunikacja i szczera informacja zwrotna są podstawą naszych relacji.",
       emoji: "🔍"
     },
     {
-      title: "Excellence",
-      description: "We strive for excellence in every project, no matter how big or small.",
+      title: "Doskonałość",
+      description: "Dążymy do doskonałości w każdym projekcie, niezależnie od jego wielkości.",
       emoji: "⭐"
     },
     {
-      title: "Collaboration",
-      description: "Working together with our clients ensures the best possible outcomes.",
+      title: "Współpraca",
+      description: "Wspólna praca z naszymi klientami zapewnia najlepsze możliwe rezultaty.",
       emoji: "🤝"
     }
   ];
@@ -30,7 +30,7 @@ export default function Values() {
     <section className="w-full px-4 md:px-0 py-16 md:py-24">
       <div className="max-w-[1200px] mx-auto">
         <h2 className="text-[36px] font-extrabold text-center text-[#1A1A1A] mb-12">
-          Our Values
+          Nasze Wartości
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (

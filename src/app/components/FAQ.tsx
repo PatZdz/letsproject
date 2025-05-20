@@ -5,36 +5,33 @@ import React, { useState } from "react";
 export default function FAQ() {
   const questions = [
     {
-      question: "Do I need to entrust the entire project to LetsProject?",
+      question: "Dlaczego warto wybrać LetsProject do realizacji swojego projektu?",
       answer:
-        "You can entrust only specific parts of the project or the entire development cycle, depending on your needs.",
+        "Łączymy wieloletnie doświadczenie z innowacyjnym podejściem. Każdy projekt traktujemy indywidualnie, zapewniając dedykowane rozwiązania, transparentną komunikację i gwarancję jakości. Nasz zespół składa się z ekspertów, którzy pomogą przekształcić Twoją wizję w rzeczywistość.",
     },
     {
-      question: "How can I take the project over?",
+      question: "Jak wygląda proces realizacji projektu?",
       answer:
-        "The project can be taken over on the basis of detailed technical specifications prepared by our team.",
+        "Proces rozpoczynamy od dokładnej analizy Twoich potrzeb i celów biznesowych. Następnie przygotowujemy szczegółową specyfikację i harmonogram. Podczas realizacji zapewniamy regularne konsultacje i możliwość wprowadzania zmian. Każdy etap kończy się testami i wymaga Twojej akceptacji.",
     },
     {
-      question:
-        "Do you guarantee a full cycle (designing, development, testing, maintaining)?",
+      question: "Jakie gwarancje otrzymuję przy współpracy?",
       answer:
-        "Yes, we provide end-to-end services, ensuring every phase is handled professionally.",
+        "Oferujemy kompleksową gwarancję na nasze usługi, w tym: dokumentację techniczną, kod źródłowy, regularne kopie zapasowe oraz wsparcie techniczne po wdrożeniu. Zapewniamy również bezpłatne poprawki w okresie gwarancyjnym i pełną transparentność w kwestii własności intelektualnej.",
     },
     {
-      question: "What project management methods do you use?",
-      answer: "We use Agile and Scrum methodologies for efficient project management.",
+      question: "Czy mogę liczyć na wsparcie po zakończeniu projektu?",
+      answer: "Absolutnie tak! Oferujemy kompleksowe wsparcie posprzedażowe, w tym: monitoring wydajności, regularne aktualizacje bezpieczeństwa, optymalizację oraz szybką reakcję na zgłoszenia. Możemy również rozwijać projekt o nowe funkcjonalności według Twoich potrzeb.",
     },
     {
-      question:
-        "How can I control the software designing process if I cooperate with you?",
+      question: "Jak zapewniacie wysoką jakość realizowanych projektów?",
       answer:
-        "You'll have access to our project management tools and regular updates during the process.",
+        "Stosujemy rygorystyczne standardy jakości na każdym etapie: od planowania po wdrożenie. Wykorzystujemy najnowsze technologie i sprawdzone metodologie (Agile, Scrum). Każdy projekt przechodzi szczegółowe testy, a nasz zespół stale podnosi swoje kwalifikacje.",
     },
     {
-      question:
-        "Who is entitled to the code in your body leasing model?",
+      question: "Ile kosztuje realizacja projektu i od czego zależy cena?",
       answer:
-        "The ownership of the code depends on the terms agreed in the contract.",
+        "Cena jest indywidualnie dostosowana do zakresu i złożoności projektu. Oferujemy konkurencyjne stawki i elastyczne modele rozliczeń. Zawsze przedstawiamy szczegółową wycenę przed rozpoczęciem prac, bez ukrytych kosztów. Możemy również zaproponować etapową realizację, dopasowaną do Twojego budżetu.",
     },
   ];
 

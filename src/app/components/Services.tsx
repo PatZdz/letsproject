@@ -7,91 +7,90 @@ import { useRouter } from 'next/navigation';
 
 export default function Services() {
   const router = useRouter();
-  
+
   const services = [
     {
-      title: "Website Development",
+      subtitle: "Rozwiązania webowe",
+      title: "Strony internetowe",
       description:
-        "We build high-performing, responsive websites and online stores with clean code and intuitive architecture. Whether you need a promotional landing page or a fully featured corporate site, our team ensures fast load times and outstanding user experiences.",
-      tags: ["web design", "web apps", "custom solutions", "ecommerce"],
-      icon: "/images/service_1.png",
+        "Tworzymy błyskawicznie działające strony internetowe i sklepy online, które skutecznie przyciągają klientów i znacząco zwiększają sprzedaż. Zapewniamy wyjątkowe doświadczenia użytkownika.",
+      icon: "/images/project_1.jpg",
     },
     {
-      title: "Mobile App Development",
+      subtitle: "Rozwój oprogramowania",
+      title: "Aplikacje Mobilne",
       description:
-        "Reach users on the go with cross-platform apps built in Flutter. We transform your vision into a dynamic mobile experience—complete with push notifications, in-app purchases, and seamless integration with your existing systems.",
-      tags: ["cross-platform apps", "app development", "custom solutions"],
-      icon: "/images/service_2.png",
+        "Pomagamy zdobyć nowych klientów dzięki nowoczesnym aplikacjom mobilnym. Przekształcamy Twoją wizję w dynamiczne doświadczenie, które skutecznie zwiększa przychody Twojej firmy.",
+      icon: "/images/project_2.jpg",
     },
     {
-      title: "Branding Design",
+      subtitle: "Identyfikacja wizualna",
+      title: "Branding i Marketing",
       description:
-        "Stand out from the competition with a memorable brand identity. We craft your logo, define color palettes, select typography, and develop brand guidelines that communicate your core values effectively. Great logo is your first impression.",
-      tags: ["brand strategy", "logo design", "social media", "brand guidelines"],
-      icon: "/images/service_3.png",
+        "Pomagamy wyróżnić się na rynku dzięki zapadającej w pamięć marce. Tworzymy profesjonalne logo i identyfikację wizualną, która przyciąga klientów i buduje silne zaufanie.",
+      icon: "/images/project_3.jpg",
     },
     {
-      title: "UX/UI Audits & Design",
+      subtitle: "Optymalizacja konwersji",
+      title: "Audyty UXUI",
       description:
-        "Our UX/UI audits pinpoint pain points and optimize user flows, reducing friction and boosting engagement. Get a sleek, user-friendly interface that keeps customers coming back. Boost your conversion and earn more money.",
-      tags: ["user experience", "user interface", "boosted conversion"],
-      icon: "/images/service_4.png",
+        "Zwiększamy sprzedaż dzięki intuicyjnym interfejsom użytkownika. Eliminujemy problemy, które mogą odstraszać potencjalnych klientów i optymalizujemy ścieżki konwersji na Twojej stronie.",
+      icon: "/images/project_4.jpg",
     },
   ];
 
   return (
     <section id="services" className="py-8 md:py-16 bg-[#F6F4F1]">
       <div className="w-full max-w-[1200px] mx-auto px-4 md:px-0">
-        <h2 className="text-2xl md:text-[36px] font-extrabold text-center mb-6 md:mb-8 text-[#1A1A1A]">
-          What can we do for you boss?
+        <h2 className="text-2xl md:text-[36px] font-extrabold text-center mb-6 md:mb-12 text-[#1A1A1A]">
+          Co możemy dla Ciebie zrobić?
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-[#F0EEEC] rounded-lg p-6 md:p-[30px] flex flex-col"
+              className="bg-[#F0EEEC] rounded-lg overflow-hidden shadow-sm"
             >
-              <div className="flex gap-4 md:gap-6 mb-2 md:mb-6">
-                <div className="w-[60px] h-[60px] md:w-[76px] md:h-[76px] rounded-full bg-[#E9E3DD] flex items-center justify-center flex-shrink-0">
-                  <Image
-                    src={service.icon}
-                    alt={service.title}
-                    width={42}
-                    height={42}
-                  />
-                </div>
-                <div className="h-[60px] md:h-[76px] flex flex-col justify-center md:justify-between">
-                  <h3 className="font-semibold text-2xl md:text-[30px] text-[#1A1A1A]">
+              <div className="flex flex-col-reverse md:flex-row h-full">
+                {/* Lewa kolumna - Treść */}
+                <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-center h-full flex-grow">
+                  <p className="text-[#3257A5] text-sm md:text-base font-medium mb-2">
+                    {service.subtitle}
+                  </p>
+                  <h3 className="font-semibold text-xl md:text-2xl text-[#1A1A1A] mb-3">
                     {service.title}
                   </h3>
-                  <div className="hidden md:flex md:flex-wrap md:gap-[4px]">
-                    {service.tags.map((tag, idx) => (
-                      <span key={idx} className="tag">
-                        {tag}
-                      </span>
-                    ))}
+                  <p className="text-[#4b5563] text-sm md:text-base mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+
+                {/* Prawa kolumna - Zdjęcie */}
+                <div className="md:w-2/5">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={service.icon}
+                      alt={service.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      priority={index === 0}
+                    />
                   </div>
                 </div>
               </div>
-              <p className="text-[#4b5563] mb-4">{service.description}</p>
-              <button 
-                onClick={() => router.push('/contact')} 
-                className="btn-secondary self-end cursor-pointer"
-              >
-                I NEED THIS! <ArrowRightIcon className="h-3 w-3" />
-              </button>
             </div>
           ))}
         </div>
-        <div className="text-center mt-8 md:mt-12">
+        <div className="text-center mt-12 md:mt-16">
           <p className="text-xl md:text-[24px] font-semibold text-[#1D1E22] mb-4">
-            Do you need a project that includes multiple services?
+            Potrzebujesz projektu, który łączy kilka usług?
           </p>
-          <button 
-            onClick={() => router.push('/contact')} 
+          <button
+            onClick={() => router.push('/contact')}
             className="btn-primary"
           >
-            GET A FREE CONSULTATION
+            UMÓW DARMOWĄ KONSULTACJĘ
           </button>
         </div>
       </div>

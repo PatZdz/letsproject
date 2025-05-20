@@ -8,7 +8,7 @@
   --background-secondary: #F0EEEC;
 }
 
-html, 
+html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
@@ -95,6 +95,16 @@ body {
   color: #7A7267;
   border-radius: 9999px;
   border: 1px solid #7A7267;
+}
+
+/* Hide scrollbar */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 768px) {

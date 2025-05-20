@@ -14,35 +14,36 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "LetsProject has transformed our brand with a stunning new identity and a website that perfectly reflects our vision. Their attention to detail and creativity made the entire process a breeze.",
+      "LetsProject przekształcił naszą markę, tworząc oszałamiającą nową identyfikację wizualną i stronę internetową, która doskonale odzwierciedla naszą wizję. Ich dbałość o szczegóły i kreatywność sprawiły, że cały proces przebiegł niezwykle sprawnie.",
     author: "Daniel Semerjyan",
-    position: "Co-Founder",
+    position: "Współzałożyciel",
     company: "FitWise",
     stars: 5,
   },
   {
     quote:
-      "Thanks to LetsProject, our new website is not only visually stunning but also incredibly fast and responsive. Our customers love the seamless experience, and we've seen a noticeable increase in engagement.",
+      "Dzięki LetsProject nasza nowa strona internetowa jest nie tylko wizualnie oszałamiająca, ale także niesamowicie szybka i responsywna. Nasi klienci uwielbiają płynne doświadczenie, a my zauważyliśmy znaczny wzrost zaangażowania.",
     author: "Marcin Zaremski",
-    position: "Founder",
+    position: "Założyciel",
     company: "GPX Overlay",
     stars: 5,
   },
   {
     quote:
-      "The mobile app developed by LetsProject exceeded all our expectations. It's user-friendly, beautifully designed, and runs flawlessly. We've received amazing feedback from our users!",
+      "Aplikacja mobilna opracowana przez LetsProject przekroczyła wszystkie nasze oczekiwania. Jest przyjazna dla użytkownika, pięknie zaprojektowana i działa bezbłędnie. Otrzymaliśmy niesamowite opinie od naszych użytkowników!",
     author: "Piotr Kluk",
-    position: "Co-Founder",
+    position: "Współzałożyciel",
     company: "Hido",
     stars: 5,
   },
 ];
 
 
+
 export default function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
-  const [budget, setBudget] = useState(1000);
-  const [currency, setCurrency] = useState<'EUR' | 'USD' | 'PLN'>('EUR');
+  const [budget, setBudget] = useState(500);
+  const [currency, setCurrency] = useState<'EUR' | 'USD' | 'PLN'>('PLN');
   const [selectedExpectations, setSelectedExpectations] = useState<string[]>([]);
   const [buttonState, setButtonState] = useState<'default' | 'sending' | 'success'>('default');
 
@@ -53,9 +54,9 @@ export default function ContactForm() {
   };
 
   const currencyRanges = {
-    EUR: { min: 1000, max: 50000 },
-    USD: { min: 1000, max: 50000 },
-    PLN: { min: 2000, max: 200000 }
+    EUR: { min: 200, max: 50000 },
+    USD: { min: 200, max: 50000 },
+    PLN: { min: 500, max: 150000 }
   };
 
   const handleExpectationsChange = (value: string) => {
@@ -110,7 +111,7 @@ export default function ContactForm() {
     <section className="w-full px-4 md:px-0 py-32 md:py-48 relative">
       <div className="max-w-[1200px] mx-auto">
         <h2 className="text-[36px] font-extrabold text-center text-[#1A1A1A] mb-12">
-          Contact
+          Kontakt
         </h2>
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="w-full lg:basis-2/5 flex flex-col gap-6 order-2 lg:order-1">
@@ -144,7 +145,7 @@ export default function ContactForm() {
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="flex-1">
                   <label htmlFor="fullName" className="text-sm font-semibold block mb-1">
-                    Full Name
+                    Imię i nazwisko
                   </label>
                   <input
                     id="fullName"
@@ -152,13 +153,13 @@ export default function ContactForm() {
                     type="text"
                     required
                     className="w-full border border-gray-300 rounded-md p-4 text-sm"
-                    placeholder="Your name"
+                    placeholder="Twoje imię i nazwisko"
                     disabled={buttonState === 'success'}
                   />
                 </div>
                 <div className="flex-1">
                   <label htmlFor="company" className="text-sm font-semibold block mb-1">
-                    Your company
+                    Twoja firma
                   </label>
                   <input
                     id="company"
@@ -166,7 +167,7 @@ export default function ContactForm() {
                     type="text"
                     required
                     className="w-full border border-gray-300 rounded-md p-4 text-sm"
-                    placeholder="Your company"
+                    placeholder="Nazwa Twojej firmy"
                     disabled={buttonState === 'success'}
                   />
                 </div>
@@ -182,17 +183,17 @@ export default function ContactForm() {
                   type="email"
                   required
                   className="w-full border border-gray-300 rounded-md p-4 text-sm"
-                  placeholder="Your e-mail"
+                  placeholder="Twój adres e-mail"
                   disabled={buttonState === 'success'}
                 />
               </div>
 
               <div>
                 <label className="text-sm font-semibold block mb-1">
-                  What do you expect from us?
+                  Czego od nas oczekujesz?
                 </label>
                 <div className="flex flex-wrap gap-2">
-                  {["Website", "Mobile App", "Branding", "Ecommerce", "UXUI Audit", "Other"].map((option, index) => (
+                  {["Strona internetowa", "Aplikacja mobilna", "Branding", "E-commerce", "Audyt UX/UI", "Inne"].map((option, index) => (
                     <label
                       key={index}
                       className={`cursor-pointer ${buttonState === 'success' ? 'pointer-events-none opacity-50' : ''}`}
@@ -217,10 +218,10 @@ export default function ContactForm() {
 
               <div>
                 <label className="text-sm font-semibold block mb-3">
-                  What budget do you have?
+                  Jaki masz budżet?
                 </label>
                 <div className="flex gap-2 mb-4">
-                  {['EUR', 'USD', 'PLN'].map((curr) => (
+                  {['PLN', 'EUR', 'USD'].map((curr) => (
                     <button
                       key={curr}
                       type="button"
@@ -243,7 +244,7 @@ export default function ContactForm() {
                   type="range"
                   min={currencyRanges[currency].min}
                   max={currencyRanges[currency].max}
-                  step={currency === 'PLN' ? 2000 : 1000}
+                  step={currency === 'PLN' ? 100 : 100}
                   value={budget}
                   onChange={(e) => {
                     if (buttonState === 'success') return;
@@ -262,13 +263,13 @@ export default function ContactForm() {
 
               <div>
                 <label htmlFor="howWeCanHelp" className="text-sm font-semibold block mb-1">
-                  How can we help you?
+                  Jak możemy Ci pomóc?
                 </label>
                 <textarea
                   id="howWeCanHelp"
                   name="howWeCanHelp"
                   className="w-full border border-gray-300 rounded-md p-2 text-sm"
-                  placeholder="Tell us about your product and your nearest plans on the design engagement"
+                  placeholder="Opowiedz nam o swoim produkcie i najbliższych planach dotyczących projektu"
                   rows={6}
                   disabled={buttonState === 'success'}
                 ></textarea>
@@ -276,7 +277,7 @@ export default function ContactForm() {
 
               <div className="relative">
                 <label htmlFor="howDidYouHear" className="text-sm font-semibold block mb-1">
-                  How did you hear about us?
+                  Skąd dowiedziałeś się o nas?
                 </label>
                 <select
                   id="howDidYouHear"
@@ -293,8 +294,8 @@ export default function ContactForm() {
                   <option value="Blog">Blog</option>
                   <option value="LinkedIn">LinkedIn</option>
                   <option value="Reddit">Reddit</option>
-                  <option value="Friends">Friends</option>
-                  <option value="Other">Other</option>
+                  <option value="Friends">Znajomi</option>
+                  <option value="Other">Inne</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 pt-6">
                   <ChevronDownIcon className="w-4 h-4" />
@@ -310,7 +311,7 @@ export default function ContactForm() {
                   disabled={buttonState === 'success'}
                 />
                 <label htmlFor="nda" className="text-sm text-gray-600">
-                  This message is to be covered by a Non-Disclosure Agreement (NDA).
+                  Ta wiadomość ma być objęta umową o zachowaniu poufności (NDA).
                 </label>
               </div>
 
@@ -320,16 +321,16 @@ export default function ContactForm() {
                 className={`btn-primary mt-4 w-full ${buttonState === 'success' ? '!bg-green-600' : ''
                   } ${(buttonState === 'sending' || buttonState === 'success') ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
-                {buttonState === 'sending' && 'SENDING...'}
-                {buttonState === 'success' && 'SENT SUCCESSFULLY 👍'}
-                {buttonState === 'default' && 'SEND'}
+                {buttonState === 'sending' && 'WYSYŁANIE...'}
+                {buttonState === 'success' && 'WYSŁANO POMYŚLNIE 👍'}
+                {buttonState === 'default' && 'WYŚLIJ'}
               </button>
 
 
 
               <p className="text-xs text-gray-600 mt-2">
-                By clicking on the button, you consent to the processing of
-                personal data and agree to the site&apos;s Privacy Policy.
+                Klikając przycisk, wyrażasz zgodę na przetwarzanie danych osobowych
+                i akceptujesz Politykę Prywatności strony.
               </p>
             </form>
           </div>

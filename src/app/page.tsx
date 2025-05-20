@@ -3,9 +3,8 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
-import WhyChooseUs from "./components/WhyChooseUs";
-import HowWeWork from "./components/HowWeWork";
-import ClientLogos from "./components/ClientLogos";
+import Projects from "./components/Projects";
+import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
@@ -17,10 +16,9 @@ export default function Page() {
     <>
       <Navbar isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
       <Hero />
-      <ClientLogos />
+      <Projects />
+      <Testimonials />
       <Services />
-      <WhyChooseUs />
-      <HowWeWork />
       <FAQ />
       <Footer />
     </>
