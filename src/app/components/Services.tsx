@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import Image from "next/image";
 import { useRouter } from 'next/navigation';
 

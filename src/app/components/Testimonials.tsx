@@ -85,7 +85,7 @@ export default function Testimonials() {
                             </div>
 
                             <p className="text-[#F6F4F1] text-lg md:text-xl italic mb-6">
-                                "{testimonials[activeIndex].text}"
+                                &quot;{testimonials[activeIndex].text}&quot;
                             </p>
 
                             <div className="text-[#F6F4F1]">

@@ -6,7 +6,7 @@ export default function TermsOfService() {
 
       <div className="prose prose-lg max-w-none">
         <p className="mb-8">
-          Witamy w LetsProject.co! Niniejsze Warunki Korzystania z Usług ("Warunki") regulują korzystanie z naszej strony
+          Witamy w LetsProject.co! Niniejsze Warunki Korzystania z Usług (&quot;Warunki&quot;) regulują korzystanie z naszej strony
           internetowej oraz usług świadczonych przez naszą agencję programistyczną, w tym projektowanie stron internetowych,
           ich rozwój oraz tworzenie aplikacji mobilnych. Korzystając z naszej strony internetowej i usług, zgadzasz się
           przestrzegać tych Warunków. Jeśli nie zgadzasz się z tymi Warunkami, prosimy o niekorzystanie z naszej strony
