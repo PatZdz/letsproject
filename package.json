@@ -20,7 +20,8 @@
     "next-intl": "^4.1.0",
     "pg": "^8.13.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "swiper": "^11.2.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

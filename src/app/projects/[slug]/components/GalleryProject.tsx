@@ -33,16 +33,16 @@ export default function GalleryProject({ gallery }: GalleryProjectProps) {
   return (
     <>
       <section className="w-full max-w-[1200px] mx-auto px-4 md:px-0">
-        <h2 className="text-[24px] md:text-3xl font-black mb-8 text-center">Project Gallery</h2>
+        <h2 className="text-[24px] md:text-3xl font-black mb-8 text-center">Galeria projektu</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {gallery.map((image, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="space-y-2"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
-              <div 
+              <div
                 className="relative aspect-[4/3] cursor-pointer hidden md:block"
                 onClick={() => handleImageSelect(image)}
               >
@@ -71,48 +71,43 @@ export default function GalleryProject({ gallery }: GalleryProjectProps) {
 
       <AnimatePresence>
         {selectedImage && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center"
             onClick={() => setSelectedImage(null)}
           >
-            <motion.div 
-              className="relative p-8 rounded-xl overflow-hidden max-w-[1200px] w-full mx-auto"
+            <motion.div
+              className="relative max-w-[900px] w-full mx-auto bg-[#F0EEEC] rounded-lg overflow-hidden"
               style={{
-                background: 'rgba(40, 40, 40, 0.5)',
-                backdropFilter: 'blur(25px)',
-                WebkitBackdropFilter: 'blur(25px)',
-                willChange: 'backdrop-filter',
-                transform: 'translateZ(0)',
+                padding: '30px 30px 60px 30px',
                 boxShadow: '0 8px 32px rgba(0, 0, 0, 0.25)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
               }}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative w-full h-[70vh] flex items-center">
+              <div className="relative w-full aspect-[4/3]">
                 <Image
                   src={selectedImage.src}
                   alt={selectedImage.alt}
                   fill
-                  className="object-contain !rounded-[8px]"
-                  sizes="min(1200px, 100vw)"
+                  className="object-contain"
+                  sizes="min(900px, 100vw)"
                   priority
                   quality={100}
                 />
               </div>
-              
+
               {selectedImage.caption && (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mt-4 text-center"
+                  className="absolute bottom-[20px] left-0 right-0 text-center px-4"
                 >
-                  <p className="text-lg text-white font-medium">
+                  <p className="text-lg text-gray-700 font-medium">
                     {selectedImage.caption}
                   </p>
                 </motion.div>

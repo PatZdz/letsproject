@@ -3,13 +3,13 @@
   "header": {
     "title": "Jak stworzyliśmy markę i platformę SaaS do zarządzania obiektami sportowymi.",
     "subtitle": "FitWise",
-    "coverImage": "/images/projects/fitwise/fitwise_header_1.jpg"
+    "coverImage": "/images/projects/fitwise/fitwise_header_1.webp"
   },
   "overview": {
     "description": "FitWise to nowoczesna aplikacja internetowa zaprojektowana specjalnie dla właścicieli obiektów sportowych i trenerów personalnych. Dzięki zaawansowanym funkcjom, FitWise umożliwia efektywne zarządzanie obiektami sportowymi, harmonogramami zajęć, rejestracją użytkowników i współpracą z trenerami. To kompleksowe narzędzie upraszcza organizację pracy, oszczędza czas i wspiera rozwój biznesu, oferując jednocześnie intuicyjny interfejs i łatwość obsługi. Wybierz FitWise, aby usprawnić działanie swojego obiektu sportowego i skupić się na tym, co najważniejsze - budowaniu relacji z klientami i rozwijaniu ich pasji do aktywności fizycznej.",
     "duration": "6 miesięcy",
-    "role": "Główny Programista",
-    "client": "FitWise Inc.",
+    "role": "Projekt, wdrożenie, branding",
+    "client": "FitWise Research Group",
     "scope": [
       "Aplikacja Internetowa",
       "Strona Internetowa",
@@ -34,37 +34,102 @@
       "description": "Trenerzy personalni często gubią się w listach osób, z którymi trenują na siłowni. Konieczne jest stworzenie rozwiązania tego problemu."
     }
   ],
-  "solutions": [
-    {
-      "title": "Projekt Zorientowany na Użytkownika",
-      "description": "Wdrożyliśmy intuicyjny interfejs, który daje szybki przegląd tego, co interesuje Cię najbardziej.",
-      "image": "/images/projects/fitwise/fitwise_solution_1.jpg"
-    },
-    {
-      "title": "Trzymaj rękę na pulsie",
-      "description": "Dodaliśmy szybki podgląd kalendarza, dzięki czemu nic Cię nigdy nie zaskoczy.",
-      "image": "/images/projects/fitwise/fitwise_solution_2.jpg"
-    },
-    {
-      "title": "Lista Obecności Uczestników",
-      "description": "Szybko sprawdź listę osób uczestniczących w zajęciach. Zaznacz, kto przyszedł, a kto nie. Mała rzecz, która bardzo pomaga.",
-      "image": "/images/projects/fitwise/fitwise_solution_3.jpg"
-    }
-  ],
+  "needs": {
+    "title": "Rozumienie potrzeb klienta i użytkowników",
+    "description": "Analiza rynku i problemów",
+    "points": [
+      {
+        "title": "Zanim rozpoczęliśmy projektowanie, przeprowadziliśmy rozmowy z:",
+        "items": [
+          "właścicielem studia motorycznego,",
+          "trenerami personalnymi,",
+          "recepcjonistami z obiektów sportowych."
+        ]
+      },
+      {
+        "title": "Najczęściej wskazywane problemy:",
+        "items": [
+          "brak wspólnego narzędzia do zarządzania,",
+          "problemy z przekazywaniem informacji (kto prowadzi jakie zajęcia),",
+          "ręczne odhaczanie obecności w zeszycie."
+        ]
+      }
+    ],
+    "conclusion": "Ten etap był kluczowy. Dzięki niemu zbudowaliśmy nie tylko funkcje, ale rozwiązania realnych problemów użytkowników."
+  },
+  "solutions": {
+    "mainImage": "/images/projects/fitwise/fitwise_solution_1.webp",
+    "secondaryImages": [
+      "/images/projects/fitwise/fitwise_solution_2.webp",
+      "/images/projects/fitwise/fitwise_solution_3.webp"
+    ],
+    "cards": [
+      {
+        "title": "Kalendarz i automatyzacja",
+        "content": "Podczas badań użytkowników okazało się, że kluczowym narzędziem w codziennej pracy jest czytelny, elastyczny kalendarz. Dlatego zaprojektowaliśmy system, który pozwala w prosty sposób planować zajęcia, przypisywać trenerów, a także dynamicznie reagować na zmiany — bez konieczności przeładowywania strony czy kontaktu z recepcją."
+      },
+      {
+        "title": "Status trenera",
+        "content": "Właściciele studiów i recepcjoniści potrzebowali szybkiego podglądu: czy dany trener jest dostępny, aktywny, obecny na miejscu. Dodaliśmy funkcjonalność, która pozwala w kilka sekund sprawdzić status kadry — bez konieczności wykonywania telefonów czy pisania wiadomości."
+      },
+      {
+        "title": "Superintuicyjny interfejs",
+        "content": "Najczęściej powtarzaną potrzebą było: \"Nie chcemy się tego uczyć — to ma być oczywiste\". Dlatego postawiliśmy na minimalistyczne, intuicyjne UXUI, inspirowane najlepszymi praktykami z aplikacji mobilnych. System nie wymaga onboardingu — wystarczy otworzyć i zacząć działać."
+      }
+    ],
+    "items": [
+      {
+        "title": "Projekt Zorientowany na Użytkownika",
+        "description": "Wdrożyliśmy intuicyjny interfejs, który daje szybki przegląd tego, co interesuje Cię najbardziej.",
+        "image": "/images/projects/fitwise/fitwise_solution_4.webp"
+      },
+      {
+        "title": "Trzymaj rękę na pulsie",
+        "description": "Dodaliśmy szybki podgląd kalendarza, dzięki czemu nic Cię nigdy nie zaskoczy.",
+        "image": "/images/projects/fitwise/fitwise_solution_5.webp"
+      },
+      {
+        "title": "Lista Obecności Uczestników",
+        "description": "Szybko sprawdź listę osób uczestniczących w zajęciach. Zaznacz, kto przyszedł, a kto nie. Mała rzecz, która bardzo pomaga.",
+        "image": "/images/projects/fitwise/fitwise_solution_6.webp"
+      }
+    ]
+  },
+  "branding": {
+    "mainImage": "/images/projects/fitwise/fitwise_branding_1.webp",
+    "secondaryImages": [
+      "/images/projects/fitwise/fitwise_branding_2.webp",
+      "/images/projects/fitwise/fitwise_branding_3.webp"
+    ],
+    "cards": [
+      {
+        "title": "Nazwa",
+        "content": "FitWise łączy w sobie Fit (fitness) oraz Wise (mądrość), symbolizując połączenie aktywności fizycznej z rozsądnym podejściem do treningu."
+      },
+      {
+        "title": "Kolory",
+        "content": "Paleta kolorystyczna opiera się na trzech podstawowych barwach: niebieskim, symbolizującym profesjonalizm, białym, reprezentującym czystość i lekkość, oraz czarnym, dodającym elegancji i nowoczesności."
+      },
+      {
+        "title": "Symbol",
+        "content": "Logo marki dynamicznie przedstawia ruch i energię, odzwierciedlając kluczowe wartości FitWise: aktywność fizyczną, rozwój osobisty i dążenie do zdrowszego stylu życia."
+      }
+    ]
+  },
   "gallery": [
     {
-      "src": "/images/projects/fitwise/fitwise_gallery_1.jpg",
+      "src": "/images/projects/fitwise/fitwise_gallery_1.webp",
       "alt": "Widok Panelu",
       "caption": "Główny widok panelu dla właścicieli obiektów sportowych"
     },
     {
-      "src": "/images/projects/fitwise/fitwise_gallery_2.jpg",
-      "alt": "Śledzenie Treningów",
+      "src": "/images/projects/fitwise/fitwise_gallery_2.webp",
+      "alt": "Branding FitWise",
       "caption": "Branding FitWise"
     },
     {
-      "src": "/images/projects/fitwise/fitwise_gallery_3.jpg",
-      "alt": "Planowanie Żywienia",
+      "src": "/images/projects/fitwise/fitwise_gallery_3.webp",
+      "alt": "Zaawansowany Kalendarz",
       "caption": "Zaawansowany Kalendarz"
     }
   ],

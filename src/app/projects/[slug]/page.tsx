@@ -7,6 +7,8 @@ import Footer from '@/app/components/Footer'
 import HeaderProject from './components/HeaderProject'
 import OverviewProject from './components/OverviewProject'
 import ChallengesProject from './components/ChallengesProject'
+import Needs from './components/Needs'
+import Branding from './components/Branding'
 import SolutionProject from './components/SolutionProject'
 import ResultsProject from './components/ResultsProject'
 import GalleryProject from './components/GalleryProject'
@@ -34,7 +36,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
           <OverviewProject {...projectData.overview} />
           <ChallengesProject challenges={projectData.challenges} />
-          <SolutionProject solutions={projectData.solutions} />
+          <Needs {...projectData.needs} />
+          <Branding {...projectData.branding} />
+          <SolutionProject {...projectData.solutions} />
           <ResultsProject metrics={projectData.results.metrics} achievements={projectData.results.achievements} />
           <GalleryProject gallery={projectData.gallery} />
           <TechnologiesProject technologies={projectData.technologies} />
