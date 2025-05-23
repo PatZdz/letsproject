@@ -160,18 +160,18 @@
     "metrics": [
       {
         "value": "10+",
-        "label": "Aktywne Siłownie",
+        "label": "Aktywne Studia",
         "description": "Coraz więcej obiektów sportowych dołącza"
       },
       {
         "value": "92%",
         "label": "Zadowolenie Użytkowników",
-        "description": "Na podstawie opinii w aplikacji"
+        "description": "Na podstawie opinii w badaniu"
       },
       {
         "value": "200+",
-        "label": "Klientów w bazie danych",
-        "description": "Siłownie przekonują się do nas"
+        "label": "Podopiecznych w bazie danych",
+        "description": "Trenerzy przekonują się do nas"
       },
       {
         "value": "100%",
