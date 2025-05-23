@@ -35,27 +35,51 @@
     }
   ],
   "needs": {
-    "title": "Rozumienie potrzeb klienta i użytkowników",
+    "title": "Badanie, które ukształtowało produkt",
     "description": "Analiza rynku i problemów",
+    "conclusion": "Nasze badania pozwoliły nam stworzyć system, który realnie odpowiada na potrzeby branży fitness.",
     "points": [
       {
-        "title": "Zanim rozpoczęliśmy projektowanie, przeprowadziliśmy rozmowy z:",
+        "title": "Badanie, które ukształtowało produkt",
+        "description": "Zanim zaprojektowaliśmy choćby jeden ekran, rozpoczęliśmy od rozmów z osobami, które miały realnie korzystać z platformy:",
         "items": [
-          "właścicielem studia motorycznego,",
-          "trenerami personalnymi,",
-          "recepcjonistami z obiektów sportowych."
+          "właścicielem studia motorycznego",
+          "trenerami personalnymi",
+          "recepcjonistami w obiektach sportowych"
         ]
       },
       {
-        "title": "Najczęściej wskazywane problemy:",
+        "title": "Co chcieliśmy zrozumieć?",
+        "description": "Naszym celem nie było tylko wypisanie potrzeb funkcjonalnych. Chcieliśmy prawdziwie wejść w ich świat:",
         "items": [
-          "brak wspólnego narzędzia do zarządzania,",
-          "problemy z przekazywaniem informacji (kto prowadzi jakie zajęcia),",
-          "ręczne odhaczanie obecności w zeszycie."
+          "jak wygląda ich typowy dzień",
+          "w jakich momentach odczuwają największy chaos",
+          "czego się boją, a co lubią w swojej pracy",
+          "jakimi narzędziami posługiwali się wcześniej",
+          "jak wygląda ich styl komunikacji"
+        ]
+      },
+      {
+        "title": "Co odkryliśmy dzięki badaniom?",
+        "description": "",
+        "items": [
+          "W wielu studiach nadal funkcjonował papierowy zeszyt obecności — trenerzy odhaczali listy ręcznie",
+          "Często panował chaos w kalendarzu – nie było jasne, kto prowadzi dane zajęcia",
+          "Recepcjoniści potrzebowali systemu, który nie wymagałby szkolenia",
+          "Trenerzy chcieli szybkiego dostępu do danych o swoich zajęciach"
+        ]
+      },
+      {
+        "title": "Jak to wpłynęło na projekt?",
+        "description": "",
+        "items": [
+          "Kalendarz został zaprojektowany tak, aby z marszu był czytelny i edytowalny",
+          "Funkcja obecności została uproszczona do 3 kliknięć",
+          "Panel trenera działa również na telefonie",
+          "Cały system był testowany z realnymi studiami"
         ]
       }
-    ],
-    "conclusion": "Ten etap był kluczowy. Dzięki niemu zbudowaliśmy nie tylko funkcje, ale rozwiązania realnych problemów użytkowników."
+    ]
   },
   "solutions": {
     "mainImage": "/images/projects/fitwise/fitwise_solution_1.webp",

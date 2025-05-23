@@ -5,6 +5,7 @@ interface UnderstandingNeedsProps {
   description: string;
   points: {
     title: string;
+    description: string;
     items: string[];
   }[];
   conclusion: string;
@@ -18,12 +19,15 @@ const Needs: React.FC<UnderstandingNeedsProps> = ({ title, description, points, 
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {points.map((point, index) => (
-          <div key={index} className="bg-[var(--background-secondary)] rounded-lg overflow-hidden">
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-black text-center mb-4">{point.title}</h3>
-              <ul className="list-disc pl-5 space-y-2">
+          <div key={index} className="bg-[var(--background-secondary)] rounded-lg overflow-hidden h-full">
+            <div className="p-6 flex flex-col h-full">
+              <h3 className="text-xl font-semibold text-black mb-4 text-center">{point.title}</h3>
+              {point.description && (
+                <p className="text-sm text-gray-700 mb-6">{point.description}</p>
+              )}
+              <ul className="list-disc space-y-3 flex-grow">
                 {point.items.map((item, itemIndex) => (
-                  <li key={itemIndex}>{item}</li>
+                  <li key={itemIndex} className="text-sm text-gray-700 ml-4">{item}</li>
                 ))}
               </ul>
             </div>
