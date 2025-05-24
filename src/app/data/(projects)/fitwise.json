@@ -159,7 +159,7 @@
   ],
   "technologies": [
     {
-      "category": "Rozwój Frontend",
+      "category": "Frontend",
       "items": [
         "Flutter",
         "TypeScript",
@@ -167,16 +167,19 @@
       ]
     },
     {
-      "category": "Rozwój Backend",
+      "category": "Backend",
       "items": [
         "Node.js",
-        "FireBase"
+        "FireBase",
+        "GCP"
       ]
     },
     {
-      "category": "Chmura i DevOps",
+      "category": "Design",
       "items": [
-        "GCP"
+        "Figma",
+        "Adobe Illustrator",
+        "Adobe Photoshop"
       ]
     }
   ],

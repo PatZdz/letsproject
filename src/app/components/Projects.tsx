@@ -20,11 +20,11 @@ export default function Projects() {
         {
             title: "Hido",
             subtitle: "Sklep internetowy oraz branding dla startupu meblarskiego",
-            image: "/images/project_2.jpg",
-            logo: "/vectors/client_logo_3.svg",
+            image: "/images/project_2.webp",
+            logo: "/vectors/client_logo_4.svg",
             logoWidth: 120,
             logoHeight: 40,
-            link: "/projects/zentron",
+            link: "/projects/hido",
         },
         {
             title: "Kukka Kukka",

@@ -1,0 +1,210 @@
+{
+  "slug": "hido",
+  "header": {
+    "title": "Jak zaprojektowaliśmy markę i sklep e-commerce dla startupu meblarskiego",
+    "subtitle": "Hido",
+    "coverImage": "/images/projects/hido/hido_header_1.webp"
+  },
+  "overview": {
+    "description": "Hido to nowoczesna marka oferująca eleganckie i funkcjonalne akcesoria do przestrzeni biurowej, takie jak podstawki pod monitor, uchwyty na telefon i laptopa oraz podkładki pod kubek. Wszystkie produkty wykonane są z wysokiej jakości stali malowanej proszkowo w dwóch wariantach kolorystycznych czarnym i białym co nadaje im trwałość, estetykę i ponadczasowy charakter. Marka stawia na minimalistyczny design, który doskonale wpisuje się w nowoczesne wnętrza, a zarazem zapewnia maksymalną ergonomię pracy. Cała produkcja odbywa się lokalnie w Polsce, z dbałością o detale i odpowiedzialne podejście do materiałów oraz procesu wytwórczego.",
+    "duration": "6 tygodni",
+    "role": "Branding, UXUI, Wdrożenie",
+    "client": "Hido",
+    "scope": [
+      "Branding",
+      "Sklep internetowy",
+      "UX/UI",
+      "Development"
+    ]
+  },
+  "challenges": [
+    {
+      "title": "Sklep jako wizerunek marki",
+      "description": "Dla Hido sklep nie był tylko narzędziem sprzedaży miał stać się wizytówką marki premium, której produkty są tak proste, że potrzebują wyjątkowo przemyślanej oprawy."
+    },
+    {
+      "title": "Brak wcześniejszego doświadczenia klienta",
+      "description": "Hido startowało od zera bez klientów, bez zdjęć, bez danych. Musieliśmy od podstaw zbudować strategię marki, tożsamość i pierwszą wersję sklepu."
+    },
+    {
+      "title": "Balans między prostotą a konwersją",
+      "description": "Zaprojektowanie minimalizmu, który był tak charakterystyczny do produktów Hido. Ważne, żeby sklep dawał odczucia, że jest 'pusty', a jednocześnie zachęca do zakupu to było największe wyzwanie UXowe."
+    }
+  ],
+  "needs": {
+    "title": "Badania, które ukształtowały produkt",
+    "description": "Przeprowadziliśmy rozmowy z potencjalnymi klientami Hido. Naszym celem było zrozumienie, dlaczego ktoś kupuje akcesoria biurkowe premium, czego szuka w sklepie, jakie ma przyzwyczajenia zakupowe.",
+    "conclusion": "Nasze badania pozwoliły nam stworzyć sklep, który realnie odpowiada na potrzeby klientów premium.",
+    "points": [
+      {
+        "title": "Estetyka sprzedaje",
+        "description": "Pierwsze wrażenie ma ogromne znaczenie. Każdy element wizualny powinien odzwierciedlać jakość produktu i budować zaufanie.",
+        "items": [
+          "Starannie dobrana kolorystyka",
+          "Spójne fonty i proporcje",
+          "Profesjonalne zdjęcia produktowe"
+        ]
+      },
+      {
+        "title": "Lekki i szybki sklep",
+        "description": "Interfejs sklepu powinien być przejrzysty, szybki i nieprzytłaczający, by klient skupił się na produkcie, a nie na przeszkodach.",
+        "items": [
+          "Brak wyskakujących popupów",
+          "Responsywność na wszystkich urządzeniach",
+          "Subtelne, nienachalne CTA"
+        ]
+      },
+      {
+        "title": "Minimalizm z duszą",
+        "description": "Użytkownicy chcą prostoty, ale nie pustki. Layout musi być lekki, ale jednocześnie żywy i przyjemny w odbiorze.",
+        "items": [
+          "Naturalne zdjęcia i tekstury",
+          "Przemyślane odstępy i hierarchia",
+          "Unikanie \"zimnych\" schematów"
+        ]
+      },
+      {
+        "title": "Produkt w użyciu",
+        "description": "Zamiast zdjęć katalogowych postawiliśmy na realistyczny kontekst produkty pokazane na biurku, w działaniu, w codziennym otoczeniu.",
+        "items": [
+          "Zdjęcia z laptopem, monitorem i telefonem",
+          "Realne biurowe scenografie",
+          "Lepsze wyobrażenie zastosowania"
+        ]
+      }
+    ]
+  },
+  "solutions": {
+    "mainImage": "/images/projects/hido/hido_solution_1.webp",
+    "secondaryImages": [
+      "/images/projects/hido/hido_solution_2.webp",
+      "/images/projects/hido/hido_solution_3.webp"
+    ],
+    "cards": [
+      {
+        "title": "Nowoczesny sklep e-commerce",
+        "content": "Zbudowany w Next.js, Medusa.js z integracją Stripe, zoptymalizowany pod szybkość i responsywność."
+      },
+      {
+        "title": "Sekcja produktowa",
+        "content": "Zdjęcia w wysokiej rozdzielczości, interaktywna galeria z naturalnym światłem, możliwość wyboru koloru (biały / czarny)."
+      },
+      {
+        "title": "Branding na każdym etapie",
+        "content": "Delikatny branding na opakowaniach, zestaw materiałów do druku i social media."
+      }
+    ],
+    "items": [
+      {
+        "title": "Eleganckie akcesoria biurkowe",
+        "description": "Zbudowaliśmy spójną markę, minimalistyczny sklep online i identyfikację wizualną, która trafia do świadomego odbiorcy.",
+        "image": "/images/projects/hido/hido_solution_4.webp"
+      },
+      {
+        "title": "Minimalistyczny design",
+        "description": "Zaprojektowaliśmy layout z naturalnymi zdjęciami, teksturą i oddechem.",
+        "image": "/images/projects/hido/hido_solution_5.webp"
+      },
+      {
+        "title": "Szybki i responsywny sklep",
+        "description": "Zbudowany w Next.js, Medusa,js z integracją Stripe, zoptymalizowany pod szybkość i responsywność.",
+        "image": "/images/projects/hido/hido_solution_6.webp"
+      }
+    ]
+  },
+  "branding": {
+    "mainImage": "/images/projects/hido/hido_branding_1.webp",
+    "secondaryImages": [
+      "/images/projects/hido/hido_branding_2.webp",
+      "/images/projects/hido/hido_branding_3.webp"
+    ],
+    "cards": [
+      {
+        "title": "Nazwa",
+        "content": "Hido krótka, prosta i neutralna fonetycznie nazwa. Zniekształcone angielskie słowo 'Hide' (ukryć). Symbolizuje minimalizm, funkcjonalność i nienachalność wizualną."
+      },
+      {
+        "title": "Kolory",
+        "content": "Biel: czystość, przestrzeń, funkcjonalność. Czerń: trwałość, siła, elegancja. Szary: odwołanie do materiału i industrialnego stylu."
+      },
+      {
+        "title": "Font",
+        "content": "Specjalnie zaprojektowany na potrzeby brandu font. Minimalistyczny o lekko geometrycznych kształtach nowoczesny, ale nietypowy."
+      }
+    ]
+  },
+  "gallery": [
+    {
+      "src": "/images/projects/hido/hido_gallery_1.webp",
+      "alt": "Mockup sklepu",
+      "caption": "Strony główna sklepu"
+    },
+    {
+      "src": "/images/projects/hido/hido_gallery_2.webp",
+      "alt": "Branding Hido",
+      "caption": "Logo Hido na produkcie uchwytu na torbę"
+    },
+    {
+      "src": "/images/projects/hido/hido_gallery_3.webp",
+      "alt": "Widok produktu",
+      "caption": "Produkt Hido w użyciu z MagSafe"
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Frontend",
+      "items": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "category": "Backend",
+      "items": [
+        "Node.js",
+        "Medusja.js",
+        "PostgreSQL",
+        "Stripe"
+      ]
+    },
+    {
+      "category": "Design",
+      "items": [
+        "Figma",
+        "Adobe Illustrator",
+        "Adobe Photoshop"
+      ]
+    }
+  ],
+  "results": {
+    "metrics": [
+      {
+        "value": "8",
+        "label": "Tygodni wdrożenia",
+        "description": "Szybkie wdrożenie projektu"
+      },
+      {
+        "value": "1000+",
+        "label": "Zamówień klientów",
+        "description": "Sprzedaż w całej Europie"
+      },
+      {
+        "value": "4.9/5",
+        "label": "Opinie klientów",
+        "description": "Estetyka i UX"
+      },
+      {
+        "value": "~1.2s",
+        "label": "Czas ładowania sklepu",
+        "description": "Pagespeed score: 96+"
+      }
+    ],
+    "achievements": [
+      "Spójna marka premium stworzona od zera",
+      "Skuteczna sprzedaż. Budowanie społęczności",
+      "Pozytywne opinie od klientów branży IT i designu",
+      "Gotowość do skalowania sklepu na rynki zagraniczne"
+    ]
+  }
+}

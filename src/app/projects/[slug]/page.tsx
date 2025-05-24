@@ -13,7 +13,6 @@ import SolutionProject from './components/SolutionProject'
 import ResultsProject from './components/ResultsProject'
 import GalleryProject from './components/GalleryProject'
 import TechnologiesProject from './components/TechnologiesProject'
-import projectData from '@/app/data/(projects)/fitwise.json'
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>
@@ -23,8 +22,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   const { slug } = use(params)
 
-  if (slug !== 'fitwise') {
-    notFound()
+  let projectData;
+
+  try {
+    projectData = require(`@/app/data/(projects)/${slug}.json`);
+  } catch (error) {
+    notFound();
   }
 
   return (

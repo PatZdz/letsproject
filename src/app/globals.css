@@ -107,6 +107,13 @@ body {
   display: none;
 }
 
+/* Fix for #Workspace */
+#Workspace {
+  background-color: #F6F4F1;
+  min-height: 100vh;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .hero-section {
     min-height: 70vh;
