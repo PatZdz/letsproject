@@ -12,7 +12,7 @@ import GalleryProject from './components/GalleryProject'
 import TechnologiesProject from './components/TechnologiesProject'
 
 interface ProjectPageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
