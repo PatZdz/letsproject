@@ -1,0 +1,209 @@
+{
+    "slug": "flycontent",
+    "header": {
+        "title": "Jak stworzyliśmy agenta AI dla twórców internetowych i influencerów",
+        "subtitle": "FlyContent",
+        "coverImage": "/images/projects/flycontent/flycontent_header_1.webp"
+    },
+    "overview": {
+        "description": "FlyContent to webowa aplikacja stworzona z myślą o content creatorach i influencerach, którzy chcą zautomatyzować planowanie swoich treści. Narzędzie działa w oparciu o Google Gemini i pomaga użytkownikom tworzyć strategie contentowe w oparciu o model Help Hub Hero od Google. Aplikacja oferuje inteligentne podpowiedzi, planery treści, analizę stylu komunikacji oraz narzędzia do optymalizacji publikacji. Dzięki połączeniu technologii AI z realnymi potrzebami twórców internetowych, FlyContent staje się osobistym asystentem każdego, kto buduje markę w sieci.",
+        "duration": "6 tygodni",
+        "role": "Branding, UXUI, Wdrożenie",
+        "client": "FlyContent",
+        "scope": [
+            "Branding",
+            "Aplikacja Webowa",
+            "UX/UI",
+            "Development"
+        ]
+    },
+    "challenges": [
+        {
+            "title": "AI jako prawdziwy partner",
+            "description": "FlyContent miał być czymś więcej niż tylko generatorem treści — celem było stworzenie AI agenta, który rozumie potrzeby twórców i potrafi dostarczyć wartość w codziennej pracy."
+        },
+        {
+            "title": "Złożoność strategii contentowej",
+            "description": "Wyzwanie polegało na tym, by uprościć tworzenie wieloetapowych planów komunikacji (Help Hub Hero), nie upraszczając ich sensu i wartości merytorycznej."
+        },
+        {
+            "title": "Balans między AI a kreatywnością",
+            "description": "Stworzenie narzędzia, które wspiera kreatywność użytkownika, ale jej nie zastępuje — to największe wyzwanie w zakresie UX i komunikacji wizualnej."
+        }
+    ],
+    "needs": {
+        "title": "Badania, które ukształtowały produkt",
+        "description": "Przeprowadziliśmy rozmowy z influencerami, twórcami treści oraz strategami contentowymi. Naszym celem było zrozumienie, jak wygląda ich proces pracy, jakie mają trudności i gdzie AI może faktycznie pomóc.",
+        "conclusion": "Badania pozwoliły nam zaprojektować asystenta AI, który uzupełnia pracę twórcy, a nie ją zastępuje.",
+        "points": [
+            {
+                "title": "Intuicyjny panel strategii",
+                "description": "Twórcy potrzebują narzędzia, które porządkuje ich pomysły, kampanie i typy treści w jednym miejscu.",
+                "items": [
+                    "Struktura Help Hub Hero",
+                    "Szybkie przełączanie między kanałami",
+                    "Przeciągnij i upuść kampanie"
+                ]
+            },
+            {
+                "title": "Asystent AI, który rozumie",
+                "description": "Respondenci oczekiwali, że AI będzie czymś więcej niż chatbotem – ma rozumieć styl i kontekst ich marki.",
+                "items": [
+                    "Dopasowanie języka do grupy docelowej",
+                    "Ustawienia tonu wypowiedzi",
+                    "Sugestie tematów i headline’ów"
+                ]
+            },
+            {
+                "title": "Kalendarz twórcy",
+                "description": "Twórcy wskazali potrzebę prostego i czytelnego kalendarza, który nie tylko przypomina, ale też inspiruje.",
+                "items": [
+                    "Widok tygodniowy i miesięczny",
+                    "Integracje z Instagramem i TikTokiem",
+                    "Automatyczne przypomnienia"
+                ]
+            },
+            {
+                "title": "Kreatywność wsparta danymi",
+                "description": "Badani twórcy chcieli wiedzieć, które treści działają najlepiej — ale bez analityki typowej dla marketerów.",
+                "items": [
+                    "Czytelne wykresy i wyniki",
+                    "Propozycje usprawnień",
+                    "Panel 'najlepsze posty'"
+                ]
+            }
+        ]
+    },
+    "solutions": {
+        "mainImage": "/images/projects/flycontent/flycontent_solution_1.webp",
+        "secondaryImages": [
+            "/images/projects/flycontent/flycontent_solution_2.webp",
+            "/images/projects/flycontent/flycontent_solution_3.webp"
+        ],
+        "cards": [
+            {
+                "title": "Agent AI do planowania treści",
+                "content": "Oparty na Google Gemini, rozumie strategię i styl twórcy. Proponuje pomysły, rozpisuje cykle i sugeruje tematy pod formaty."
+            },
+            {
+                "title": "Pomysłowy kalendarz",
+                "content": "Widok zaplanowanych treści, kampanii i cykli, zsynchronizowany z mediami społecznościowymi i wspierany przez AI."
+            },
+            {
+                "title": "Przemyślany UX",
+                "content": "Klarowna struktura i pełna kontrola. FlyContent wygląda jak notatnik, ale działa jak zespół kreatywny."
+            }
+        ],
+        "items": [
+            {
+                "title": "Content Strategy AI",
+                "description": "Planowanie treści według metody Help Hub Hero, wspierane przez Gemini i UX zorientowany na twórcę.",
+                "image": "/images/projects/flycontent/flycontent_solution_4.webp"
+            },
+            {
+                "title": "Moduł analiz",
+                "description": "Szybka analiza skuteczności i inspiracje do nowych treści na podstawie danych historycznych.",
+                "image": "/images/projects/flycontent/flycontent_solution_5.webp"
+            },
+            {
+                "title": "Kalendarz i automatyzacja",
+                "description": "Zaprojektowany dla osób, które żyją contentem – łączy przypomnienia, planery i AI w jednym widoku.",
+                "image": "/images/projects/flycontent/flycontent_solution_6.webp"
+            }
+        ]
+    },
+    "branding": {
+        "mainImage": "/images/projects/flycontent/flycontent_branding_1.webp",
+        "secondaryImages": [
+            "/images/projects/flycontent/flycontent_branding_2.webp",
+            "/images/projects/flycontent/flycontent_branding_3.webp"
+        ],
+        "cards": [
+            {
+                "title": "Nazwa",
+                "content": "FlyContent to nazwa inspirowana lekkością i ruchem. Symbolizuje przepływ kreatywnych pomysłów i wsparcie AI w locie codziennej pracy."
+            },
+            {
+                "title": "Kolory",
+                "content": "Biel: czystość interfejsu. Czerń: skupienie i profesjonalizm. Błękit: elastyczność i technologia AI – odwołanie do ptasiej lekkości i nowoczesnych narzędzi."
+            },
+            {
+                "title": "Symbol",
+                "content": "Logo przedstawia sylwetkę ptaka w locie – jako symbol wolności tworzenia, mobilności i elastycznego myślenia."
+            }
+        ]
+    },
+    "gallery": [
+        {
+            "src": "/images/projects/flycontent/flycontent_gallery_1.webp",
+            "alt": "Dashboard FlyContent",
+            "caption": "Widok główny aplikacji"
+        },
+        {
+            "src": "/images/projects/flycontent/flycontent_gallery_2.webp",
+            "alt": "Branding FlyContent",
+            "caption": "Logo w wersji ciemnej i jasnej"
+        },
+        {
+            "src": "/images/projects/flycontent/flycontent_gallery_3.webp",
+            "alt": "Planer treści",
+            "caption": "Kalendarz zintegrowany z AI"
+        }
+    ],
+    "technologies": [
+        {
+            "category": "Frontend",
+            "items": [
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS"
+            ]
+        },
+        {
+            "category": "Backend",
+            "items": [
+                "Node.js",
+                "Firebase",
+                "Google Gemini API"
+            ]
+        },
+        {
+            "category": "Design",
+            "items": [
+                "Figma",
+                "Adobe Illustrator",
+                "Adobe Photoshop"
+            ]
+        }
+    ],
+    "results": {
+        "metrics": [
+            {
+                "value": "6",
+                "label": "Tygodni wdrożenia",
+                "description": "Od brandingu po gotowe MVP"
+            },
+            {
+                "value": "300+",
+                "label": "Użytkowników w pierwszym miesiącu",
+                "description": "Wersja testowa z wysokim zaangażowaniem"
+            },
+            {
+                "value": "4.9/5",
+                "label": "Średnia ocena",
+                "description": "Wysoka satysfakcja wśród influencerów"
+            },
+            {
+                "value": "~0.9s",
+                "label": "Czas ładowania",
+                "description": "Pagespeed score: 98+"
+            }
+        ],
+        "achievements": [
+            "Utworzenie aplikacji MVP dla niszowej grupy twórców",
+            "Zoptymalizowany UX z pomocą feedbacku early-adopterów",
+            "Integracja z Google Gemini na poziomie agenta AI",
+            "Gotowość do skalowania na rynek SaaS B2C"
+        ]
+    }
+}
