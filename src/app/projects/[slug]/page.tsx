@@ -1,7 +1,4 @@
-'use client'
-
 import { notFound } from 'next/navigation'
-import { useState, use } from 'react'
 import Navbar from '@/app/components/Navbar'
 import Footer from '@/app/components/Footer'
 import HeaderProject from './components/HeaderProject'
@@ -15,12 +12,11 @@ import GalleryProject from './components/GalleryProject'
 import TechnologiesProject from './components/TechnologiesProject'
 
 interface ProjectPageProps {
-  params: Promise<{ slug: string }>
+  params: { slug: string }
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-  const { slug } = use(params)
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = params
 
   let projectData;
 
@@ -32,7 +28,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <>
-      <Navbar isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
+      <Navbar />
       <main className="min-h-screen w-full">
         <HeaderProject {...projectData.header} />
 
