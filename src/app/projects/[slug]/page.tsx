@@ -25,8 +25,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   let projectData;
 
   try {
-    projectData = require(`@/app/data/(projects)/${slug}.json`);
-  } catch (error) {
+    projectData = await import(`@/app/data/(projects)/${slug}.json`).then(module => module.default);
+  } catch {
     notFound();
   }
 
