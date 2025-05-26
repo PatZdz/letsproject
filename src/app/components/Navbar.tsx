@@ -6,13 +6,18 @@ import Image from "next/image";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 
 interface NavbarProps {
-  isDrawerOpen: boolean;
-  setIsDrawerOpen: (isOpen: boolean) => void;
+  isDrawerOpen?: boolean;
+  setIsDrawerOpen?: (isOpen: boolean) => void;
 }
 
-export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
+export default function Navbar({ isDrawerOpen: propIsDrawerOpen, setIsDrawerOpen: propSetIsDrawerOpen }: NavbarProps = {}) {
+  const [internalIsDrawerOpen, setInternalIsDrawerOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+
+  // Używamy propsów jeśli są dostępne, w przeciwnym razie używamy stanu wewnętrznego
+  const isDrawerOpen = propIsDrawerOpen !== undefined ? propIsDrawerOpen : internalIsDrawerOpen;
+  const setIsDrawerOpen = propSetIsDrawerOpen || setInternalIsDrawerOpen;
 
   useEffect(() => {
     let lastScrollY = window.scrollY;

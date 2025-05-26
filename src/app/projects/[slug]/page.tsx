@@ -16,13 +16,19 @@ interface ProjectPageProps {
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const { slug } = params
+  // Używamy await dla params, aby upewnić się, że są dostępne przed destrukturyzacją
+  const params_resolved = await params;
+  const { slug } = params_resolved;
 
   let projectData;
 
   try {
     projectData = await import(`@/app/data/(projects)/${slug}.json`).then(module => module.default);
-  } catch {
+    if (!projectData) {
+      notFound();
+    }
+  } catch (error) {
+    console.error(`Error loading project data for slug ${slug}:`, error);
     notFound();
   }
 
