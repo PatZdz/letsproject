@@ -13,29 +13,29 @@ export default function Services() {
       title: "Strony internetowe",
       description:
         "Tworzymy błyskawicznie działające strony internetowe i sklepy online, które skutecznie przyciągają klientów i znacząco zwiększają sprzedaż. Zapewniamy wyjątkowe doświadczenia użytkownika.",
-      icon: "/images/project_1.jpg",
+      icon: "/images/services_1.webp",
     },
     {
       subtitle: "Rozwój oprogramowania",
       title: "Aplikacje Mobilne",
       description:
         "Pomagamy zdobyć nowych klientów dzięki nowoczesnym aplikacjom mobilnym. Przekształcamy Twoją wizję w dynamiczne doświadczenie, które skutecznie zwiększa przychody Twojej firmy.",
-      icon: "/images/project_2.jpg",
+      icon: "/images/services_2.webp"
     },
     {
       subtitle: "Identyfikacja wizualna",
       title: "Branding i Marketing",
       description:
         "Pomagamy wyróżnić się na rynku dzięki zapadającej w pamięć marce. Tworzymy profesjonalne logo i identyfikację wizualną, która przyciąga klientów i buduje silne zaufanie.",
-      icon: "/images/project_3.jpg",
+      icon: "/images/services_3.webp",
     },
     {
       subtitle: "Optymalizacja konwersji",
       title: "Audyty UXUI",
       description:
         "Zwiększamy sprzedaż dzięki intuicyjnym interfejsom użytkownika. Eliminujemy problemy, które mogą odstraszać potencjalnych klientów i optymalizujemy ścieżki konwersji na Twojej stronie.",
-      icon: "/images/project_4.jpg",
-    },
+      icon: "/images/services_4.webp"
+    }
   ];
 
   return (

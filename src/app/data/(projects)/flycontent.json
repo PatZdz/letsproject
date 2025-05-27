@@ -106,8 +106,8 @@
                 "image": "/images/projects/flycontent/flycontent_solution_5.webp"
             },
             {
-                "title": "Kalendarz i automatyzacja",
-                "description": "Zaprojektowany dla osób, które żyją contentem – łączy przypomnienia, planery i AI w jednym widoku.",
+                "title": "Strategia Help Hub Hero",
+                "description": "Zaprojektowany dla osób, które żyją contentem łączy przypomnienia, planery i AI w jednym widoku.",
                 "image": "/images/projects/flycontent/flycontent_solution_6.webp"
             }
         ]
@@ -129,25 +129,25 @@
             },
             {
                 "title": "Symbol",
-                "content": "Logo przedstawia sylwetkę ptaka w locie – jako symbol wolności tworzenia, mobilności i elastycznego myślenia."
+                "content": "Logo przedstawia sylwetkę ptaka – jako symbol wolności tworzenia, mobilności i elastycznego myślenia."
             }
         ]
     },
     "gallery": [
         {
             "src": "/images/projects/flycontent/flycontent_gallery_1.webp",
-            "alt": "Dashboard FlyContent",
-            "caption": "Widok główny aplikacji"
+            "alt": "Wykorzystanie logo",
+            "caption": "Wykorzystanie logo"
         },
         {
             "src": "/images/projects/flycontent/flycontent_gallery_2.webp",
-            "alt": "Branding FlyContent",
-            "caption": "Logo w wersji ciemnej i jasnej"
+            "alt": "Widok statysyk",
+            "caption": "Widok statysyk"
         },
         {
             "src": "/images/projects/flycontent/flycontent_gallery_3.webp",
-            "alt": "Planer treści",
-            "caption": "Kalendarz zintegrowany z AI"
+            "alt": "Widok brand boostera",
+            "caption": "KWidok brand boostera AI"
         }
     ],
     "technologies": [
@@ -163,7 +163,7 @@
             "category": "Backend",
             "items": [
                 "Node.js",
-                "Firebase",
+                "Supabase",
                 "Google Gemini API"
             ]
         },
@@ -179,24 +179,24 @@
     "results": {
         "metrics": [
             {
-                "value": "6",
+                "value": "8",
                 "label": "Tygodni wdrożenia",
                 "description": "Od brandingu po gotowe MVP"
             },
             {
                 "value": "300+",
-                "label": "Użytkowników w pierwszym miesiącu",
+                "label": "Użytkowników w zapisanych pierwszym miesiącu",
                 "description": "Wersja testowa z wysokim zaangażowaniem"
             },
             {
-                "value": "4.9/5",
-                "label": "Średnia ocena",
-                "description": "Wysoka satysfakcja wśród influencerów"
+                "value": "15000+",
+                "label": "Promptów",
+                "description": "Wygenerowanych w pierwszym miesiącu"
             },
             {
-                "value": "~0.9s",
-                "label": "Czas ładowania",
-                "description": "Pagespeed score: 98+"
+                "value": "12",
+                "label": "Średnio",
+                "description": "promptów tygodniowo na użytkownika"
             }
         ],
         "achievements": [

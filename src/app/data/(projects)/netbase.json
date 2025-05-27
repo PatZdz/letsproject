@@ -50,7 +50,7 @@
                 "description": "Respondenci preferowali formę cyfrowych wizytówek zamiast list kontaktów typowych dla telefonów.",
                 "items": [
                     "Podgląd najważniejszych danych",
-                    "Mini portret lub logo firmy",
+                    "Notatka oraz linki",
                     "Sortowanie według kategorii"
                 ]
             },
@@ -83,7 +83,7 @@
         "cards": [
             {
                 "title": "Wizytówki cyfrowe",
-                "content": "Umożliwiają szybki podgląd kontaktu – z nazwą, firmą, wydarzeniem i notatką kontekstową."
+                "content": "Umożliwiają szybki podgląd kontaktu z nazwą, firmą, wydarzeniem i notatką kontekstową."
             },
             {
                 "title": "Przypomnienia follow-up",
@@ -106,8 +106,8 @@
                 "image": "/images/projects/netbase/netbase_solution_5.webp"
             },
             {
-                "title": "Zarządzanie wydarzeniami",
-                "description": "Grupuj kontakty według wydarzeń, konferencji lub branży i dodawaj notatki w czasie rzeczywistym.",
+                "title": "Łatwy backup i synchronizacja",
+                "description": "Możliwość synchronizacji bazy danych z Google Drive lub eksport pliku w formiacie json/csv do pamięci urządzenia.",
                 "image": "/images/projects/netbase/netbase_solution_6.webp"
             }
         ]
@@ -125,11 +125,11 @@
             },
             {
                 "title": "Kolory",
-                "content": "Czerń: prywatność i technologia. Biel: przejrzystość i prostota. Zieleń: rozwój relacji i świeżość kontaktów."
+                "content": "Czerń: prywatność i technologia. Beżowy: przejrzystość i prostota. Zieleń: rozwój relacji i świeżość kontaktów."
             },
             {
                 "title": "Symbol",
-                "content": "Logo to połączenie sieci punktów i ikony wizytówki – symbolizuje nowoczesne, prywatne centrum kontaktów."
+                "content": "Logo to człowiek w chmurze – symbolizuje nowoczesne, prywatne centrum kontaktów."
             }
         ]
     },
@@ -163,8 +163,7 @@
             "category": "Backend",
             "items": [
                 "Lokalna pamięć urządzenia",
-                "AsyncStorage",
-                "No backend required"
+                "AsyncStorage"
             ]
         },
         {

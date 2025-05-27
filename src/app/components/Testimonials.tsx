@@ -23,31 +23,24 @@ export default function Testimonials() {
             rating: 5
         },
         {
-            author: 'Marcin Zaremski',
-            company: 'GPX Overlay',
-            text: 'LetsProject stworzył dla nas nowoczesną i responsywną stronę internetową, która zachwyca użytkowników swoją estetyką. Dzięki ich pracy znacząco wzrosło zaangażowanie klientów i efektywność naszego biznesu online.',
-            logo: '/vectors/client_logo_3.svg',
-            rating: 5
-        },
-        {
             author: 'Piotr Kluk',
             company: 'Hido',
-            text: 'LetsProject dostarczył nam aplikację mobilną, która przewyższyła nasze oczekiwania pod każdym względem. Intuicyjny interfejs i niezawodne działanie sprawiły, że nasi użytkownicy są zachwyceni finalnym produktem.',
-            logo: '/vectors/client_logo_1.svg',
+            text: 'LetsProject stworzył dla nas nowoczesną i responsywną stronę internetową, która zachwyca użytkowników swoją estetyką. Dzięki ich pracy znacząco wzrosło zaangażowanie klientów i efektywność naszego biznesu online.',
+            logo: '/vectors/client_logo_4.svg',
             rating: 5
         },
         {
-            author: 'Anna Kowalska',
-            company: 'TechCorp',
-            text: 'LetsProject pomógł nam stworzyć aplikację, która idealnie odpowiada potrzebom naszych użytkowników. Profesjonalne podejście zespołu i doskonała komunikacja przyczyniły się do sukcesu projektu. To jest to czego szukasz!',
-            logo: '/vectors/client_logo_4.svg',
-            rating: 4
+            author: 'Adam Steczkowski',
+            company: 'FlyContent',
+            text: 'LetsProject dostarczył nam aplikację webową, która przewyższyła nasze oczekiwania pod każdym względem. Intuicyjny interfejs i niezawodne działanie sprawiły, że nasi użytkownicy są zachwyceni finalnym produktem, my również.',
+            logo: '/vectors/client_logo_5.svg',
+            rating: 5
         },
         {
-            author: 'Jan Nowak',
-            company: 'InnovateX',
-            text: 'LetsProject zrealizował nasz projekt zgodnie z najnowszymi trendami w designie i funkcjonalności. Ich kreatywne podejście i techniczna doskonałość pozwoliły nam osiągnąć wszystkie założone cele biznesowe.',
-            logo: '/vectors/client_logo_5.svg',
+            author: 'Marcin Caremski',
+            company: 'NetBase',
+            text: 'LetsProject pomógł nam stworzyć aplikację, która idealnie odpowiada potrzebom naszych użytkowników. Profesjonalne podejście zespołu i doskonała komunikacja przyczyniły się do sukcesu projektu. To jest to czego szukasz!',
+            logo: '/vectors/client_logo_3.svg',
             rating: 5
         },
     ];
@@ -62,8 +55,8 @@ export default function Testimonials() {
 
     return (
         <section className="relative py-16 md:py-24 overflow-hidden">
-            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/about_3.jpg')" }}></div>
-            <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-black/70"></div>
+            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/testimonial_bg.webp')" }}></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
             <div className="absolute inset-0 opacity-10 bg-pattern"></div>
 
             <div className="relative w-full max-w-[1200px] mx-auto px-4 md:px-6">
