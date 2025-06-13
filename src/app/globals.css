@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -53,7 +54,7 @@ body {
 
 .btn-primary {
   padding: 16px 40px;
-  background-color: #3257A5;
+  background-color: #0285FF;
   color: #F6F4F1;
   font-size: 12px;
   font-weight: 600;
@@ -63,7 +64,11 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #2A4A8E;
+  background-color: #0171D9;
+}
+
+.btn-primary:active {
+  background-color: #016ACD;
 }
 
 .btn-secondary {
@@ -73,7 +78,7 @@ body {
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #3257A5;
+  color: #0285FF;
   cursor: pointer;
 }
 
@@ -118,4 +123,46 @@ body {
   .hero-section {
     min-height: 70vh;
   }
+}
+
+/* Clinic Page styles */
+.clinic-page h1,
+.clinic-page h2,
+.clinic-page h3,
+.clinic-page h4,
+.clinic-page h5,
+.clinic-page h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.clinic-page .btn-primary {
+  background-color: #3498DB;
+}
+
+.clinic-page .btn-primary:hover {
+  background-color: #2980B9;
+}
+
+.clinic-page .btn-secondary {
+  color: #3498DB;
+}
+
+.clinic-cookie-consent .btn-primary {
+  background-color: #3498DB !important;
+}
+
+.clinic-cookie-consent .btn-primary:hover {
+  background-color: #2980B9 !important;
+}
+
+.clinic-cookie-consent .accent-\[\#3257A5\] {
+  accent-color: #3498DB !important;
+}
+
+.clinic-cookie-consent .text-\[\#3257A5\] {
+  color: #3498DB !important;
+}
+
+.clinic-cookie-consent .hover\:text-\[\#264380\]:hover {
+  color: #2980B9 !important;
 }

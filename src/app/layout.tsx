@@ -6,8 +6,8 @@ import CookieConsent from "./components/CookieConsent";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "LetsProject - Design & Development Agency",
-  description: "Digital Solutions for Ambitious Brands",
+  title: "LetsProject - Rozwiązania cyfrowe",
+  description: "Cyfrowe rozwiązania dla Twojego biznesu",
 };
 
 export default function RootLayout({

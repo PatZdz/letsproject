@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface CookieSettings {
   necessary: boolean;
@@ -10,6 +11,9 @@ interface CookieSettings {
 }
 
 export default function CookieConsent() {
+  const pathname = usePathname();
+  const isClinicPage = pathname.startsWith('/clinic');
+
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [cookieSettings, setCookieSettings] = useState<CookieSettings>({
@@ -64,7 +68,7 @@ export default function CookieConsent() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-[600px] bg-white shadow-2xl rounded-2xl z-[9999] border border-gray-100">
+    <div className={`fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-[600px] bg-white shadow-2xl rounded-2xl z-[9999] border border-gray-100 ${isClinicPage ? 'clinic-cookie-consent' : ''}`}>
       <div className="p-6 flex flex-col gap-4">
         <div className="flex items-start gap-4">
           <div className="flex-1">
