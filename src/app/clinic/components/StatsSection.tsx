@@ -26,23 +26,7 @@ export default function StatsSection() {
     }
   ];
 
-  const insights = [
-    {
-      title: "Pierwsza wizyta online",
-      description: "Twoja strona to często pierwszy kontakt pacjenta z gabinetem. Ma 7 sekund na zrobienie dobrego wrażenia.",
-      impact: "Profesjonalna strona = większe zaufanie"
-    },
-    {
-      title: "Lokalne wyszukiwania",
-      description: "Większość pacjentów szuka gabinetów w swojej okolicy. Optymalizacja lokalna to klucz do sukcesu.",
-      impact: "Lepsze SEO = więcej pacjentów"
-    },
-    {
-      title: "Mobilna dostępność",
-      description: "Pacjenci coraz częściej szukają gabinetów na telefonie, szczególnie w sytuacjach nagłych.",
-      impact: "Responsywność = dostępność 24/7"
-    }
-  ];
+
 
   return (
     <section className="py-16 md:py-24 bg-[#F6F4F1]">

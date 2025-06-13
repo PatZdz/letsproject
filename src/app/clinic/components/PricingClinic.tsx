@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { useRouter } from "next/navigation";
 
 export default function PricingClinic() {
-  const [selectedPackage, setSelectedPackage] = useState(1);
   const router = useRouter();
 
   const handlePackageSelect = (packageName: string) => {
@@ -67,13 +66,7 @@ export default function PricingClinic() {
     }
   ];
 
-  const addOns = [
-    { name: "Dodatkowe języki", price: "800 zł" },
-    { name: "Sklep internetowy", price: "1,500 zł" },
-    { name: "Aplikacja mobilna", price: "3,000 zł" },
-    { name: "Zaawansowana analityka", price: "500 zł/mies" },
-    { name: "Dodatkowe szkolenia", price: "300 zł/h" }
-  ];
+
 
   return (
     <section id="pricing" className="py-16 md:py-24 bg-[#F6F4F1]">
