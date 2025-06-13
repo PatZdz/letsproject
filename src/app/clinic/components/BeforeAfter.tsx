@@ -86,12 +86,6 @@ export default function BeforeAfter() {
     "Nowoczesny, profesjonalny design budujący zaufanie pacjentów"
   ];
 
-  const results = [
-    "53% użytkowników opuszcza wolno ładujące się strony",
-    "Niski współczynnik konwersji z odwiedzin na zapisy",
-    "Brak widoczności w lokalnych wynikach wyszukiwania"
-  ];
-
   return (
     <section className="py-16 md:py-24 bg-[#F6F4F1]">
       <div className="w-full max-w-[1200px] mx-auto px-4 md:px-0">
@@ -120,7 +114,7 @@ export default function BeforeAfter() {
             >
               {/* Before Image (Right side) */}
               <div className="absolute inset-0 w-full h-full">
-                <img src="/images/clinic/orto_clinic_d.webp" alt="Before" className="w-full h-full object-cover" />
+                <Image src="/images/clinic/orto_clinic_d.webp" alt="Before" className="w-full h-full object-cover" fill />
               </div>
 
               {/* After Image (Left side) */}
@@ -128,7 +122,7 @@ export default function BeforeAfter() {
                 className="absolute inset-0 w-full h-full"
                 style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
               >
-                <img src="/images/clinic/before.webp" alt="After" className="w-full h-full object-cover" />
+                <Image src="/images/clinic/before.webp" alt="After" className="w-full h-full object-cover" fill />
               </div>
 
               {/* Slider Handle with enhanced visibility */}
@@ -199,8 +193,8 @@ export default function BeforeAfter() {
           <p className="text-lg text-[#2C3E50] font-semibold mb-6">
             Potrzebujesz więcej informacji?
           </p>
-          <a href="/clinic#contact" className="bg-[#3498DB] hover:bg-[#2980B9] text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300 inline-block">
-            POROZMAWIAJMY O TWOICH POTRZEBACH
+          <a href="/clinic#contact" className="btn-primary inline-block">
+            ZAMÓW BEZPŁATNY AUDYT
           </a>
         </div>
       </div>
