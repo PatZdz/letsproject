@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import React, { useState } from "react";
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import Image from "next/image";

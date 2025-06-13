@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import Navbar from "./components/NavbarClinic";
 import Footer from "./components/FooterClinic";
 import HeroClinic from "./components/HeroClinic";
@@ -25,7 +25,9 @@ export default function ClinicPage() {
       <StatsSection />
       <PricingClinic />
       <AuthoritySection />
-      <ContactFormClinic />
+      <Suspense fallback={<div>Loading form...</div>}>
+        <ContactFormClinic />
+      </Suspense>
       <Footer />
     </main>
   );
