@@ -21,7 +21,8 @@ export default function DemoSection() {
       mockup: {
         desktopImage: "/images/clinic/stoma_clinic_d.webp",
         mobileImage: "/images/clinic/stoma_clinic_m.webp"
-      }
+      },
+      demoLink: "https://clinic-stoma-1.vercel.app/"
     },
     {
       title: "Gabinet Ortodontyczny",
@@ -36,7 +37,8 @@ export default function DemoSection() {
       mockup: {
         desktopImage: "/images/clinic/orto_clinic_d.webp",
         mobileImage: "/images/clinic/orto_clinic_m.webp"
-      }
+      },
+      demoLink: "https://clinic-orto-1.vercel.app/"
     },
 
   ];
@@ -150,9 +152,9 @@ export default function DemoSection() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-4 items-center md:justify-center lg:justify-start">
-              <button className="btn-primary w-full md:w-auto">
+              <a href={demos[activeDemo].demoLink} target="_blank" rel="noopener noreferrer" className="btn-primary w-full md:w-auto text-center">
                 ZOBACZ TEN PRZYKŁAD
-              </button>
+              </a>
               <a href="/clinic#contact" className="btn-secondary flex items-center gap-2">
                 Zamów podobną stronę <ArrowRightIcon className="h-3 w-3" />
               </a>
