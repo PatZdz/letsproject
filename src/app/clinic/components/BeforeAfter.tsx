@@ -117,7 +117,7 @@ export default function BeforeAfter() {
             >
               {/* Before Image (Right side) */}
               <div className="absolute inset-0 w-full h-full">
-                <Image src="/images/clinic/orto_clinic_d.webp" alt="Before" fill className="object-cover" />
+                <Image src="/images/clinic/stoma_clinic_d.webp" alt="Before" fill className="object-cover" />
               </div>
 
               {/* After Image (Left side) */}
@@ -130,14 +130,14 @@ export default function BeforeAfter() {
 
               {/* Slider Handle with enhanced visibility */}
               <div
-                className="absolute top-0 bottom-0 w-1 bg-white shadow-lg cursor-col-resize z-10 group-hover:w-2"
+                className="absolute top-0 bottom-0 w-1 bg-[#3498DB] shadow-lg cursor-col-resize z-10 group-hover:w-2"
                 style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
                 onMouseDown={handleStart}
                 onTouchStart={handleStart}
                 onTouchEnd={handleEnd}
               >
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center border-2 border-gray-300 group-hover:scale-110 transition-transform duration-200">
-                  <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-[#3498DB] rounded-full shadow-md flex items-center justify-center border-2 border-white group-hover:scale-110 transition-transform duration-200">
+                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 18L4 12L10 6" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 18L20 12L14 6" />
                   </svg>

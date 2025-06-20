@@ -19,8 +19,8 @@ export default function DemoSection() {
         "Mapa dojazdu"
       ],
       mockup: {
-        desktopImage: "/images/clinic/orto_clinic_d.webp",
-        mobileImage: "/images/clinic/orto_clinic_m.webp"
+        desktopImage: "/images/clinic/stoma_clinic_d.webp",
+        mobileImage: "/images/clinic/stoma_clinic_m.webp"
       }
     },
     {
@@ -38,21 +38,7 @@ export default function DemoSection() {
         mobileImage: "/images/clinic/orto_clinic_m.webp"
       }
     },
-    {
-      title: "Gabinet Medycyny Estetycznej",
-      category: "Medycyna estetyczna",
-      features: [
-        "Konsultacje online",
-        "Galeria efektów",
-        "Kalkulator kosztów",
-        "Blog o urodzie",
-        "Certyfikaty jakości"
-      ],
-      mockup: {
-        desktopImage: "/images/clinic/orto_clinic_d.webp",
-        mobileImage: "/images/clinic/orto_clinic_m.webp"
-      }
-    }
+
   ];
 
   return (
